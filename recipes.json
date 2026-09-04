@@ -23921,429 +23921,208 @@
   },
   {
     "id": "AF-0461",
-    "key": "knoblauch-kräuter-tofu-mit-peperoni-AF-0461",
-    "title": "Knoblauch-Kräuter Tofu mit Peperoni",
+    "key": "champignon-zwiebel-pfanne-AF-0461",
+    "title": "Champignon-Zwiebel-Pfanne",
     "category": "Vegetarisch",
     "tags": [
-      "Knoblauch-Kräuter",
-      "Peperoni",
+      "Specials",
       "Vegetarisch",
-      "Airfryer"
+      "Airfryer",
+      "Champignons"
     ],
     "portions": 2,
-    "temperature": 190,
-    "minutes": 18,
+    "temperature": 180,
+    "minutes": 13,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Peperoni",
+      "400 g Champignons",
+      "1 Zwiebel",
       "1 EL Olivenöl",
-      "1 TL Knoblauchgranulat",
-      "1 TL italienische Kräuter",
-      "1 TL Zitronensaft",
-      "Salz nach Geschmack"
+      "1 Knoblauchzehe",
+      "1 TL Petersilie",
+      "Salz und Pfeffer"
     ],
     "steps": [
-      "Tofu und Peperoni vorbereiten.",
-      "Mit Knoblauch, Kräutern und Zitronensaft marinieren.",
-      "Peperoni in breite Streifen schneiden und zusammen mit der Hauptzutat garen.",
-      "Bei 190 °C insgesamt etwa 18 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Champignons putzen und halbieren, Zwiebel in Spalten schneiden.",
+      "Alles mit Öl, Knoblauch, Salz und Pfeffer vermengen.",
+      "Bei 180 °C 10–13 Minuten garen und zweimal durchschütteln.",
+      "Mit Petersilie bestreuen und sofort servieren."
     ],
     "nutrition": {
-      "kcal": 515,
-      "protein_g": 24,
-      "carbs_g": 34,
-      "fat_g": 25
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "🍄",
     "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "peperoni",
-      "olivenöl",
-      "knoblauchgranulat",
-      "italienische kräuter",
-      "zitronensaft",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      "",
+      "salz und pfeffer"
     ],
-    "image": "peppers.jpg",
+    "image": "med_veg.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0462",
-    "key": "smoky-bbq-tofu-mit-zucchini-AF-0462",
-    "title": "Smoky BBQ Tofu mit Zucchini",
+    "key": "knoblauch-parmesan-champignons-AF-0462",
+    "title": "Knoblauch-Parmesan-Champignons",
     "category": "Vegetarisch",
     "tags": [
-      "Smoky BBQ",
-      "Zucchini",
+      "Specials",
       "Vegetarisch",
-      "Airfryer"
+      "Airfryer",
+      "Champignons"
     ],
     "portions": 2,
     "temperature": 185,
-    "minutes": 17,
+    "minutes": 12,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Zucchini",
+      "400 g Champignons",
       "1 EL Olivenöl",
-      "1 EL BBQ-Sauce",
-      "1 TL geräuchertes Paprikapulver",
-      "1/2 TL Zwiebelpulver",
-      "Salz nach Geschmack"
+      "2 Knoblauchzehen",
+      "35 g Parmesan",
+      "1 TL Petersilie",
+      "Salz und Pfeffer"
     ],
     "steps": [
-      "Tofu und Zucchini vorbereiten.",
-      "Mit BBQ-Sauce, Rauchpaprika und Zwiebelpulver vermengen.",
-      "Zucchini etwas dicker schneiden und erst nach 5 Minuten dazugeben.",
-      "Bei 185 °C insgesamt etwa 17 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Champignons halbieren.",
+      "Mit Öl, Knoblauch, Salz und Pfeffer mischen.",
+      "Bei 185 °C 9 Minuten garen, Parmesan darübergeben und weitere 2–3 Minuten rösten.",
+      "Mit Petersilie servieren."
     ],
     "nutrition": {
-      "kcal": 540,
-      "protein_g": 24,
-      "carbs_g": 38,
-      "fat_g": 28
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "🍄",
     "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "zucchini",
-      "olivenöl",
-      "bbq-sauce",
-      "geräuchertes paprikapulver",
-      "/2 tl zwiebelpulver",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      "",
+      "salz und pfeffer"
     ],
-    "image": "veg.jpg",
+    "image": "med_veg.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0463",
-    "key": "honig-senf-tofu-mit-kartoffeln-AF-0463",
-    "title": "Honig-Senf Tofu mit Kartoffeln",
+    "key": "kartoffel-champignon-pfanne-AF-0463",
+    "title": "Kartoffel-Champignon-Pfanne",
     "category": "Vegetarisch",
     "tags": [
-      "Honig-Senf",
-      "Kartoffeln",
+      "Specials",
       "Vegetarisch",
-      "Airfryer"
+      "Airfryer",
+      "Champignons"
     ],
     "portions": 2,
-    "temperature": 195,
-    "minutes": 24,
+    "temperature": 190,
+    "minutes": 22,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Kartoffeln",
+      "350 g Kartoffeln",
+      "250 g Champignons",
+      "1 Zwiebel",
       "1 EL Olivenöl",
-      "1 TL Honig",
-      "1 EL Senf",
-      "1/2 TL Thymian",
-      "Salz nach Geschmack"
+      "1 TL Paprikapulver",
+      "Salz und Pfeffer"
     ],
     "steps": [
-      "Tofu und Kartoffeln vorbereiten.",
-      "Honig, Senf und Thymian verrühren und die Hauptzutaten damit marinieren.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 24 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Kartoffeln klein würfeln und mit Öl und Gewürzen mischen.",
+      "Kartoffeln bei 190 °C 10 Minuten vorgaren.",
+      "Champignons und Zwiebel dazugeben und weitere 10–12 Minuten garen.",
+      "Zwischendurch zweimal schütteln."
     ],
     "nutrition": {
-      "kcal": 390,
-      "protein_g": 24,
-      "carbs_g": 42,
-      "fat_g": 13
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "🍄",
     "difficulty": "Mittel",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "kartoffeln",
-      "olivenöl",
-      "honig",
-      "senf",
-      "/2 tl thymian",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      "",
+      "salz und pfeffer"
     ],
     "image": "potatoes.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0464",
-    "key": "mediterran-tofu-mit-kartoffeln-AF-0464",
-    "title": "Mediterran Tofu mit Kartoffeln",
+    "key": "gefuellte-champignons-mit-frischkaese-AF-0464",
+    "title": "Gefüllte Champignons mit Frischkäse",
     "category": "Vegetarisch",
     "tags": [
-      "Mediterran",
-      "Kartoffeln",
+      "Specials",
       "Vegetarisch",
-      "Airfryer"
+      "Airfryer",
+      "Champignons"
     ],
     "portions": 2,
-    "temperature": 195,
-    "minutes": 24,
+    "temperature": 180,
+    "minutes": 12,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Kartoffeln",
-      "1 EL Olivenöl",
-      "1 TL Oregano",
-      "1 TL Basilikum",
-      "1 TL Zitronensaft",
-      "Salz nach Geschmack"
+      "8 grosse Champignons",
+      "120 g Frischkäse",
+      "30 g geriebener Käse",
+      "1 Frühlingszwiebel",
+      "1 TL Kräuter",
+      "Salz und Pfeffer"
     ],
     "steps": [
-      "Tofu und Kartoffeln vorbereiten.",
-      "Mit Oregano, Basilikum und etwas Zitrone mediterran würzen.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 24 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Stiele entfernen und klein hacken.",
+      "Frischkäse, Stiele, Frühlingszwiebel und Kräuter mischen.",
+      "Champignons füllen und Käse darüberstreuen.",
+      "Bei 180 °C 10–12 Minuten überbacken."
     ],
     "nutrition": {
-      "kcal": 415,
-      "protein_g": 24,
-      "carbs_g": 46,
-      "fat_g": 16
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
-    "difficulty": "Mittel",
+    "emoji": "🍄",
+    "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "kartoffeln",
-      "olivenöl",
-      "oregano",
-      "basilikum",
-      "zitronensaft",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      "",
+      "salz und pfeffer"
     ],
-    "image": "potatoes.jpg",
+    "image": "stuffed_pepper.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0465",
-    "key": "curry-joghurt-tofu-mit-gemüse-AF-0465",
-    "title": "Curry-Joghurt Tofu mit Gemüse",
-    "category": "Vegetarisch",
+    "key": "gyros-kartoffel-bowl-AF-0465",
+    "title": "Gyros-Kartoffel-Bowl",
+    "category": "Specials",
     "tags": [
-      "Curry-Joghurt",
-      "Gemüse",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 190,
-    "minutes": 19,
-    "preheat": true,
-    "ingredients": [
-      "400 g Tofu",
-      "250 g Gemüse",
-      "1 EL Olivenöl",
-      "2 EL Naturjoghurt",
-      "1 TL Currypulver",
-      "1/2 TL Kurkuma",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Tofu und Gemüse vorbereiten.",
-      "Joghurt mit Curry und Kurkuma verrühren und alles darin marinieren.",
-      "Gemüse in ähnlich große Stücke schneiden und den Korb während des Garens zweimal schütteln.",
-      "Bei 190 °C insgesamt etwa 19 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 440,
-      "protein_g": 24,
-      "carbs_g": 18,
-      "fat_g": 19
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "tofu",
-      "gemüse",
-      "olivenöl",
-      "naturjoghurt",
-      "currypulver",
-      "/2 tl kurkuma",
-      "salz nach geschmack"
-    ],
-    "image": "veg.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0466",
-    "key": "sweet-chili-tofu-mit-brokkoli-AF-0466",
-    "title": "Sweet Chili Tofu mit Brokkoli",
-    "category": "Vegetarisch",
-    "tags": [
-      "Sweet Chili",
-      "Brokkoli",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 185,
-    "minutes": 16,
-    "preheat": true,
-    "ingredients": [
-      "400 g Tofu",
-      "250 g Brokkoli",
-      "1 EL Olivenöl",
-      "1 EL Sweet-Chili-Sauce",
-      "1 TL Limettensaft",
-      "1/2 TL Knoblauchgranulat",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Tofu und Brokkoli vorbereiten.",
-      "Mit Sweet-Chili, Limette und Knoblauch marinieren.",
-      "Brokkoli erst nach etwa der Hälfte der Garzeit dazugeben, damit er bissfest bleibt.",
-      "Bei 185 °C insgesamt etwa 16 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 465,
-      "protein_g": 24,
-      "carbs_g": 22,
-      "fat_g": 22
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "tofu",
-      "brokkoli",
-      "olivenöl",
-      "sweet-chili-sauce",
-      "limettensaft",
-      "/2 tl knoblauchgranulat",
-      "salz nach geschmack"
-    ],
-    "image": "veg.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0467",
-    "key": "paprika-kräuter-tofu-mit-peperoni-AF-0467",
-    "title": "Paprika-Kräuter Tofu mit Peperoni",
-    "category": "Vegetarisch",
-    "tags": [
-      "Paprika-Kräuter",
-      "Peperoni",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 190,
-    "minutes": 18,
-    "preheat": true,
-    "ingredients": [
-      "400 g Tofu",
-      "250 g Peperoni",
-      "1 EL Olivenöl",
-      "1 TL Paprikapulver",
-      "1/2 TL Rosmarin",
-      "1/2 TL Thymian",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Tofu und Peperoni vorbereiten.",
-      "Mit Paprika, Rosmarin und Thymian kräftig würzen.",
-      "Peperoni in breite Streifen schneiden und zusammen mit der Hauptzutat garen.",
-      "Bei 190 °C insgesamt etwa 18 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 490,
-      "protein_g": 24,
-      "carbs_g": 26,
-      "fat_g": 25
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "tofu",
-      "peperoni",
-      "olivenöl",
-      "paprikapulver",
-      "/2 tl rosmarin",
-      "/2 tl thymian",
-      "salz nach geschmack"
-    ],
-    "image": "peppers.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0468",
-    "key": "tex-mex-tofu-mit-zucchini-AF-0468",
-    "title": "Tex-Mex Tofu mit Zucchini",
-    "category": "Vegetarisch",
-    "tags": [
-      "Tex-Mex",
-      "Zucchini",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 185,
-    "minutes": 17,
-    "preheat": true,
-    "ingredients": [
-      "400 g Tofu",
-      "250 g Zucchini",
-      "1 EL Olivenöl",
-      "1 TL Kreuzkümmel",
-      "1 TL Paprikapulver",
-      "1/2 TL Chiliflocken",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Tofu und Zucchini vorbereiten.",
-      "Mit Kreuzkümmel, Paprika und Chili Tex-Mex würzen.",
-      "Zucchini etwas dicker schneiden und erst nach 5 Minuten dazugeben.",
-      "Bei 185 °C insgesamt etwa 17 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 515,
-      "protein_g": 24,
-      "carbs_g": 30,
-      "fat_g": 28
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "tofu",
-      "zucchini",
-      "olivenöl",
-      "kreuzkümmel",
-      "paprikapulver",
-      "/2 tl chiliflocken",
-      "salz nach geschmack"
-    ],
-    "image": "veg.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0469",
-    "key": "parmesan-kräuter-tofu-mit-kartoffeln-AF-0469",
-    "title": "Parmesan-Kräuter Tofu mit Kartoffeln",
-    "category": "Vegetarisch",
-    "tags": [
-      "Parmesan-Kräuter",
-      "Kartoffeln",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
@@ -24351,519 +24130,1328 @@
     "minutes": 24,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Kartoffeln",
+      "350 g Pouletgeschnetzeltes",
+      "350 g Kartoffeln",
+      "1 rote Zwiebel",
       "1 EL Olivenöl",
-      "25 g Parmesan",
-      "1 TL italienische Kräuter",
-      "1/2 TL Knoblauchgranulat",
-      "Salz nach Geschmack"
+      "2 TL Gyrosgewürz",
+      "100 g Tzatziki"
     ],
     "steps": [
-      "Tofu und Kartoffeln vorbereiten.",
-      "Mit Parmesan, Kräutern und Knoblauch vermengen.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 24 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Kartoffeln würfeln, würzen und 10 Minuten vorgaren.",
+      "Poulet und Zwiebel mit Gyrosgewürz dazugeben.",
+      "Weitere 12–14 Minuten garen und zwischendurch schütteln.",
+      "Mit Tzatziki als Bowl servieren."
     ],
     "nutrition": {
-      "kcal": 540,
-      "protein_g": 24,
-      "carbs_g": 34,
-      "fat_g": 13
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Mittel",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "kartoffeln",
-      "olivenöl",
-      "parmesan",
-      "italienische kräuter",
-      "/2 tl knoblauchgranulat",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "chicken_sweetpotato.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0466",
+    "key": "cheeseburger-roellchen-AF-0466",
+    "title": "Cheeseburger-Röllchen",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 190,
+    "minutes": 10,
+    "preheat": true,
+    "ingredients": [
+      "4 kleine Tortillas",
+      "250 g Rinderhack",
+      "80 g Cheddar",
+      "2 EL Gurkenwürfel",
+      "1 EL Ketchup",
+      "1 TL Senf"
+    ],
+    "steps": [
+      "Hackfleisch krümelig anbraten oder vorgegart verwenden.",
+      "Mit Käse, Gurke, Ketchup und Senf auf Tortillas verteilen.",
+      "Eng aufrollen und mit der Naht nach unten in den Korb legen.",
+      "Bei 190 °C 8–10 Minuten knusprig garen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "meatballs.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0467",
+    "key": "poulet-cordon-bleu-AF-0467",
+    "title": "Poulet-Cordon-bleu",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 185,
+    "minutes": 18,
+    "preheat": true,
+    "ingredients": [
+      "2 Pouletbrüste",
+      "2 Scheiben Schinken",
+      "2 Scheiben Käse",
+      "40 g Paniermehl",
+      "1 Ei",
+      "Salz und Pfeffer"
+    ],
+    "steps": [
+      "Pouletbrüste einschneiden und mit Schinken und Käse füllen.",
+      "Mit Ei und Paniermehl panieren.",
+      "Leicht mit Öl besprühen.",
+      "Bei 185 °C 16–18 Minuten garen, bis das Poulet durch ist."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Mittel",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "salz und pfeffer"
+    ],
+    "image": "chicken_mediterranean.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0468",
+    "key": "bbq-poulet-mit-wedges-AF-0468",
+    "title": "BBQ-Poulet mit Wedges",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 195,
+    "minutes": 25,
+    "preheat": true,
+    "ingredients": [
+      "350 g Pouletbrust",
+      "400 g Kartoffeln",
+      "2 EL BBQ-Sauce",
+      "1 EL Olivenöl",
+      "1 TL Paprikapulver",
+      "Salz"
+    ],
+    "steps": [
+      "Kartoffeln in Wedges schneiden und 10 Minuten vorgaren.",
+      "Poulet mit BBQ-Sauce bestreichen und zugeben.",
+      "Weitere 13–15 Minuten garen, einmal wenden.",
+      "Vor dem Servieren Gargrad des Poulets prüfen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Mittel",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "-sauce",
+      "",
+      "",
+      "salz"
+    ],
+    "image": "bbq_wings.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0469",
+    "key": "loaded-potatoes-mit-kaese-speck-AF-0469",
+    "title": "Loaded Potatoes mit Käse & Speck",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 195,
+    "minutes": 25,
+    "preheat": true,
+    "ingredients": [
+      "2 grosse Kartoffeln",
+      "80 g Cheddar",
+      "60 g Speckwürfel",
+      "2 EL Crème fraîche",
+      "1 Frühlingszwiebel"
+    ],
+    "steps": [
+      "Kartoffeln halbieren und Schnittflächen leicht ölen.",
+      "Bei 195 °C ca. 20 Minuten weich garen.",
+      "Mit Käse und Speck belegen und 4–5 Minuten überbacken.",
+      "Mit Crème fraîche und Frühlingszwiebel servieren."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Mittel",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
     "image": "potato_parmesan.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0470",
-    "key": "zitrone-pfeffer-tofu-mit-kartoffeln-AF-0470",
-    "title": "Zitrone-Pfeffer Tofu mit Kartoffeln",
-    "category": "Vegetarisch",
+    "key": "fajita-poulet-AF-0470",
+    "title": "Fajita-Poulet",
+    "category": "Specials",
     "tags": [
-      "Zitrone-Pfeffer",
-      "Kartoffeln",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
-    "temperature": 195,
-    "minutes": 24,
+    "temperature": 190,
+    "minutes": 16,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Kartoffeln",
+      "350 g Pouletstreifen",
+      "2 Peperoni",
+      "1 Zwiebel",
       "1 EL Olivenöl",
-      "1 EL Zitronensaft",
-      "1 TL Zitronenabrieb",
-      "1/2 TL schwarzer Pfeffer",
-      "Salz nach Geschmack"
+      "2 TL Fajita-Gewürz",
+      "1 Limette"
     ],
     "steps": [
-      "Tofu und Kartoffeln vorbereiten.",
-      "Mit Zitrone und schwarzem Pfeffer frisch marinieren.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 24 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Poulet, Peperoni und Zwiebel in Streifen schneiden.",
+      "Mit Öl und Fajita-Gewürz vermengen.",
+      "Bei 190 °C 14–16 Minuten garen und zweimal schütteln.",
+      "Mit Limettensaft abschmecken."
     ],
     "nutrition": {
-      "kcal": 390,
-      "protein_g": 24,
-      "carbs_g": 38,
-      "fat_g": 16
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Mittel",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "kartoffeln",
-      "olivenöl",
-      "zitronensaft",
-      "zitronenabrieb",
-      "/2 tl schwarzer pfeffer",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      "-gewürz",
+      ""
     ],
-    "image": "potatoes.jpg",
+    "image": "chicken_pepper.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0471",
-    "key": "knoblauch-kräuter-tofu-mit-gemüse-AF-0471",
-    "title": "Knoblauch-Kräuter Tofu mit Gemüse",
-    "category": "Vegetarisch",
+    "key": "teriyaki-poulet-bites-AF-0471",
+    "title": "Teriyaki-Poulet-Bites",
+    "category": "Specials",
     "tags": [
-      "Knoblauch-Kräuter",
-      "Gemüse",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
     "temperature": 190,
-    "minutes": 19,
+    "minutes": 15,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Gemüse",
-      "1 EL Olivenöl",
-      "1 TL Knoblauchgranulat",
-      "1 TL italienische Kräuter",
-      "1 TL Zitronensaft",
-      "Salz nach Geschmack"
+      "400 g Pouletbrust",
+      "3 EL Teriyaki-Sauce",
+      "1 TL Sesam",
+      "1 Frühlingszwiebel"
     ],
     "steps": [
-      "Tofu und Gemüse vorbereiten.",
-      "Mit Knoblauch, Kräutern und Zitronensaft marinieren.",
-      "Gemüse in ähnlich große Stücke schneiden und den Korb während des Garens zweimal schütteln.",
-      "Bei 190 °C insgesamt etwa 19 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Poulet würfeln und mit Teriyaki-Sauce marinieren.",
+      "Bei 190 °C 13–15 Minuten garen und zweimal schütteln.",
+      "Mit Sesam und Frühlingszwiebel bestreuen."
     ],
     "nutrition": {
-      "kcal": 415,
-      "protein_g": 24,
-      "carbs_g": 42,
-      "fat_g": 19
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "gemüse",
-      "olivenöl",
-      "knoblauchgranulat",
-      "italienische kräuter",
-      "zitronensaft",
-      "salz nach geschmack"
+      "",
+      "-sauce",
+      "",
+      ""
     ],
-    "image": "veg.jpg",
+    "image": "teriyaki.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0472",
-    "key": "smoky-bbq-tofu-mit-brokkoli-AF-0472",
-    "title": "Smoky BBQ Tofu mit Brokkoli",
-    "category": "Vegetarisch",
+    "key": "halloumi-gemuese-bowl-AF-0472",
+    "title": "Halloumi-Gemüse-Bowl",
+    "category": "Specials",
     "tags": [
-      "Smoky BBQ",
-      "Brokkoli",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
-    "temperature": 185,
-    "minutes": 16,
+    "temperature": 190,
+    "minutes": 14,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Brokkoli",
+      "250 g Halloumi",
+      "1 Zucchini",
+      "1 Peperoni",
+      "1 rote Zwiebel",
       "1 EL Olivenöl",
-      "1 EL BBQ-Sauce",
-      "1 TL geräuchertes Paprikapulver",
-      "1/2 TL Zwiebelpulver",
-      "Salz nach Geschmack"
+      "1 TL Oregano"
     ],
     "steps": [
-      "Tofu und Brokkoli vorbereiten.",
-      "Mit BBQ-Sauce, Rauchpaprika und Zwiebelpulver vermengen.",
-      "Brokkoli erst nach etwa der Hälfte der Garzeit dazugeben, damit er bissfest bleibt.",
-      "Bei 185 °C insgesamt etwa 16 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Gemüse und Halloumi mundgerecht schneiden.",
+      "Gemüse mit Öl und Oregano 5 Minuten vorgaren.",
+      "Halloumi zugeben und weitere 8–9 Minuten garen.",
+      "Als Bowl servieren."
     ],
     "nutrition": {
-      "kcal": 440,
-      "protein_g": 24,
-      "carbs_g": 46,
-      "fat_g": 22
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "brokkoli",
-      "olivenöl",
-      "bbq-sauce",
-      "geräuchertes paprikapulver",
-      "/2 tl zwiebelpulver",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
-    "image": "veg.jpg",
+    "image": "halloumi_veg.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0473",
-    "key": "honig-senf-tofu-mit-peperoni-AF-0473",
-    "title": "Honig-Senf Tofu mit Peperoni",
-    "category": "Vegetarisch",
+    "key": "roesti-taler-AF-0473",
+    "title": "Rösti-Taler",
+    "category": "Specials",
     "tags": [
-      "Honig-Senf",
-      "Peperoni",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
-    "temperature": 190,
-    "minutes": 18,
+    "temperature": 195,
+    "minutes": 15,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Peperoni",
-      "1 EL Olivenöl",
-      "1 TL Honig",
-      "1 EL Senf",
-      "1/2 TL Thymian",
-      "Salz nach Geschmack"
+      "400 g festkochende Kartoffeln",
+      "1 Ei",
+      "1 EL Speisestärke",
+      "1 kleine Zwiebel",
+      "Salz und Pfeffer"
     ],
     "steps": [
-      "Tofu und Peperoni vorbereiten.",
-      "Honig, Senf und Thymian verrühren und die Hauptzutaten damit marinieren.",
-      "Peperoni in breite Streifen schneiden und zusammen mit der Hauptzutat garen.",
-      "Bei 190 °C insgesamt etwa 18 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Kartoffeln grob reiben und gut ausdrücken.",
+      "Mit Ei, Stärke, Zwiebel und Gewürzen mischen.",
+      "Flache Taler formen und leicht ölen.",
+      "Bei 195 °C 12–15 Minuten garen, einmal wenden."
     ],
     "nutrition": {
-      "kcal": 465,
-      "protein_g": 24,
-      "carbs_g": 18,
-      "fat_g": 25
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "peperoni",
-      "olivenöl",
-      "honig",
-      "senf",
-      "/2 tl thymian",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      "salz und pfeffer"
     ],
-    "image": "peppers.jpg",
+    "image": "potatoes.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0474",
-    "key": "mediterran-tofu-mit-zucchini-AF-0474",
-    "title": "Mediterran Tofu mit Zucchini",
-    "category": "Vegetarisch",
+    "key": "airfryer-flammkuchen-AF-0474",
+    "title": "Airfryer-Flammkuchen",
+    "category": "Specials",
     "tags": [
-      "Mediterran",
-      "Zucchini",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 185,
-    "minutes": 17,
-    "preheat": true,
-    "ingredients": [
-      "400 g Tofu",
-      "250 g Zucchini",
-      "1 EL Olivenöl",
-      "1 TL Oregano",
-      "1 TL Basilikum",
-      "1 TL Zitronensaft",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Tofu und Zucchini vorbereiten.",
-      "Mit Oregano, Basilikum und etwas Zitrone mediterran würzen.",
-      "Zucchini etwas dicker schneiden und erst nach 5 Minuten dazugeben.",
-      "Bei 185 °C insgesamt etwa 17 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 490,
-      "protein_g": 24,
-      "carbs_g": 22,
-      "fat_g": 28
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "tofu",
-      "zucchini",
-      "olivenöl",
-      "oregano",
-      "basilikum",
-      "zitronensaft",
-      "salz nach geschmack"
-    ],
-    "image": "veg.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0475",
-    "key": "curry-joghurt-tofu-mit-kartoffeln-AF-0475",
-    "title": "Curry-Joghurt Tofu mit Kartoffeln",
-    "category": "Vegetarisch",
-    "tags": [
-      "Curry-Joghurt",
-      "Kartoffeln",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 195,
-    "minutes": 24,
-    "preheat": true,
-    "ingredients": [
-      "400 g Tofu",
-      "250 g Kartoffeln",
-      "1 EL Olivenöl",
-      "2 EL Naturjoghurt",
-      "1 TL Currypulver",
-      "1/2 TL Kurkuma",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Tofu und Kartoffeln vorbereiten.",
-      "Joghurt mit Curry und Kurkuma verrühren und alles darin marinieren.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 24 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 515,
-      "protein_g": 24,
-      "carbs_g": 26,
-      "fat_g": 13
-    },
-    "emoji": "🥦",
-    "difficulty": "Mittel",
-    "favorite": false,
-    "ingredient_keys": [
-      "tofu",
-      "kartoffeln",
-      "olivenöl",
-      "naturjoghurt",
-      "currypulver",
-      "/2 tl kurkuma",
-      "salz nach geschmack"
-    ],
-    "image": "potatoes.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0476",
-    "key": "sweet-chili-tofu-mit-kartoffeln-AF-0476",
-    "title": "Sweet Chili Tofu mit Kartoffeln",
-    "category": "Vegetarisch",
-    "tags": [
-      "Sweet Chili",
-      "Kartoffeln",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 195,
-    "minutes": 24,
-    "preheat": true,
-    "ingredients": [
-      "400 g Tofu",
-      "250 g Kartoffeln",
-      "1 EL Olivenöl",
-      "1 EL Sweet-Chili-Sauce",
-      "1 TL Limettensaft",
-      "1/2 TL Knoblauchgranulat",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Tofu und Kartoffeln vorbereiten.",
-      "Mit Sweet-Chili, Limette und Knoblauch marinieren.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 24 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 540,
-      "protein_g": 24,
-      "carbs_g": 30,
-      "fat_g": 16
-    },
-    "emoji": "🥦",
-    "difficulty": "Mittel",
-    "favorite": false,
-    "ingredient_keys": [
-      "tofu",
-      "kartoffeln",
-      "olivenöl",
-      "sweet-chili-sauce",
-      "limettensaft",
-      "/2 tl knoblauchgranulat",
-      "salz nach geschmack"
-    ],
-    "image": "potatoes.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0477",
-    "key": "paprika-kräuter-tofu-mit-gemüse-AF-0477",
-    "title": "Paprika-Kräuter Tofu mit Gemüse",
-    "category": "Vegetarisch",
-    "tags": [
-      "Paprika-Kräuter",
-      "Gemüse",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
     "temperature": 190,
-    "minutes": 19,
+    "minutes": 9,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Gemüse",
-      "1 EL Olivenöl",
-      "1 TL Paprikapulver",
-      "1/2 TL Rosmarin",
-      "1/2 TL Thymian",
-      "Salz nach Geschmack"
+      "1 Flammkuchenteig",
+      "100 g Crème fraîche",
+      "80 g Speckwürfel",
+      "1 kleine Zwiebel",
+      "Pfeffer"
     ],
     "steps": [
-      "Tofu und Gemüse vorbereiten.",
-      "Mit Paprika, Rosmarin und Thymian kräftig würzen.",
-      "Gemüse in ähnlich große Stücke schneiden und den Korb während des Garens zweimal schütteln.",
-      "Bei 190 °C insgesamt etwa 19 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Teig passend zum Korb zuschneiden.",
+      "Mit Crème fraîche bestreichen und belegen.",
+      "Bei 190 °C 7–9 Minuten knusprig backen."
     ],
     "nutrition": {
-      "kcal": 390,
-      "protein_g": 24,
-      "carbs_g": 34,
-      "fat_g": 19
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "gemüse",
-      "olivenöl",
-      "paprikapulver",
-      "/2 tl rosmarin",
-      "/2 tl thymian",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      "pfeffer"
     ],
-    "image": "veg.jpg",
+    "image": "pasta.jpg",
     "nutrition_estimated": true
   },
   {
-    "id": "AF-0478",
-    "key": "tex-mex-tofu-mit-brokkoli-AF-0478",
-    "title": "Tex-Mex Tofu mit Brokkoli",
-    "category": "Vegetarisch",
+    "id": "AF-0475",
+    "key": "pizza-baguettes-AF-0475",
+    "title": "Pizza-Baguettes",
+    "category": "Specials",
     "tags": [
-      "Tex-Mex",
-      "Brokkoli",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
     "temperature": 185,
-    "minutes": 16,
+    "minutes": 9,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Brokkoli",
-      "1 EL Olivenöl",
-      "1 TL Kreuzkümmel",
-      "1 TL Paprikapulver",
-      "1/2 TL Chiliflocken",
-      "Salz nach Geschmack"
+      "2 Baguettebrötchen",
+      "100 g Tomatensauce",
+      "120 g Mozzarella",
+      "80 g Schinken",
+      "1 TL Oregano"
     ],
     "steps": [
-      "Tofu und Brokkoli vorbereiten.",
-      "Mit Kreuzkümmel, Paprika und Chili Tex-Mex würzen.",
-      "Brokkoli erst nach etwa der Hälfte der Garzeit dazugeben, damit er bissfest bleibt.",
-      "Bei 185 °C insgesamt etwa 16 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Baguettes halbieren und mit Tomatensauce bestreichen.",
+      "Mit Schinken, Mozzarella und Oregano belegen.",
+      "Bei 185 °C 7–9 Minuten überbacken."
     ],
     "nutrition": {
-      "kcal": 415,
-      "protein_g": 24,
-      "carbs_g": 38,
-      "fat_g": 22
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "tofu",
-      "brokkoli",
-      "olivenöl",
-      "kreuzkümmel",
-      "paprikapulver",
-      "/2 tl chiliflocken",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "pasta.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0476",
+    "key": "ueberbackene-nachos-AF-0476",
+    "title": "Überbackene Nachos",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 180,
+    "minutes": 7,
+    "preheat": true,
+    "ingredients": [
+      "150 g Tortilla-Chips",
+      "120 g Cheddar",
+      "80 g Mais",
+      "1 kleine Peperoni",
+      "2 EL Jalapeños optional"
+    ],
+    "steps": [
+      "Nachos in eine airfryergeeignete Form geben.",
+      "Mais, Peperoni und Käse verteilen.",
+      "Bei 180 °C 5–7 Minuten überbacken."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "-chips",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "peppers.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0477",
+    "key": "mozzarella-sticks-AF-0477",
+    "title": "Mozzarella-Sticks",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 190,
+    "minutes": 8,
+    "preheat": true,
+    "ingredients": [
+      "200 g Mozzarella-Sticks oder fester Mozzarella",
+      "1 Ei",
+      "60 g Paniermehl",
+      "30 g Mehl",
+      "1 TL italienische Kräuter"
+    ],
+    "steps": [
+      "Mozzarella in Sticks schneiden und 30 Minuten einfrieren.",
+      "In Mehl, Ei und Paniermehl doppelt panieren.",
+      "Bei 190 °C 6–8 Minuten goldbraun garen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "-sticks oder fester mozzarella",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "halloumi_veg.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0478",
+    "key": "mac-cheese-baellchen-AF-0478",
+    "title": "Mac-&-Cheese-Bällchen",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 190,
+    "minutes": 10,
+    "preheat": true,
+    "ingredients": [
+      "300 g kalte Mac & Cheese",
+      "1 Ei",
+      "70 g Paniermehl",
+      "20 g Parmesan"
+    ],
+    "steps": [
+      "Kalte Mac & Cheese zu festen Kugeln formen.",
+      "In Ei und Paniermehl-Parmesan-Mix wenden.",
+      "Bei 190 °C 8–10 Minuten knusprig garen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "& cheese",
+      "",
+      "",
+      ""
+    ],
+    "image": "pasta.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0479",
+    "key": "fruehstuecks-wraps-AF-0479",
+    "title": "Frühstücks-Wraps",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 185,
+    "minutes": 9,
+    "preheat": true,
+    "ingredients": [
+      "2 Tortillas",
+      "3 Eier",
+      "60 g Schinken",
+      "60 g Käse",
+      "1 Frühlingszwiebel"
+    ],
+    "steps": [
+      "Eier kurz stocken lassen und mit Schinken und Zwiebel mischen.",
+      "Auf Tortillas verteilen, Käse dazugeben und einrollen.",
+      "Bei 185 °C 7–9 Minuten knusprig garen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "pasta.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0480",
+    "key": "apfel-zimt-taschen-AF-0480",
+    "title": "Apfel-Zimt-Taschen",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 180,
+    "minutes": 10,
+    "preheat": true,
+    "ingredients": [
+      "1 Blätterteig",
+      "2 Äpfel",
+      "1 TL Zimt",
+      "1 EL Zucker",
+      "1 TL Zitronensaft"
+    ],
+    "steps": [
+      "Äpfel klein würfeln und mit Zimt, Zucker und Zitrone mischen.",
+      "Blätterteig füllen und zu Taschen verschliessen.",
+      "Bei 180 °C 9–10 Minuten goldbraun backen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "applechips.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0481",
+    "key": "knusprige-gnocchi-caprese-AF-0481",
+    "title": "Knusprige Gnocchi Caprese",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 195,
+    "minutes": 14,
+    "preheat": true,
+    "ingredients": [
+      "400 g Gnocchi",
+      "150 g Cherrytomaten",
+      "100 g Mini-Mozzarella",
+      "1 EL Olivenöl",
+      "1 TL italienische Kräuter",
+      "Basilikum"
+    ],
+    "steps": [
+      "Gnocchi mit Öl und Kräutern mischen.",
+      "Bei 195 °C 10 Minuten knusprig garen.",
+      "Tomaten 3–4 Minuten mitgaren.",
+      "Mit Mozzarella und Basilikum servieren."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "-mozzarella",
+      "",
+      "",
+      "basilikum"
+    ],
+    "image": "pasta.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0482",
+    "key": "crispy-caesar-poulet-AF-0482",
+    "title": "Crispy Caesar Poulet",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 190,
+    "minutes": 16,
+    "preheat": true,
+    "ingredients": [
+      "350 g Pouletbrust",
+      "50 g Paniermehl",
+      "25 g Parmesan",
+      "1 Ei",
+      "1 TL Knoblauchpulver",
+      "Caesar-Dressing"
+    ],
+    "steps": [
+      "Poulet in Streifen schneiden.",
+      "In Ei und Parmesan-Paniermehl wenden.",
+      "Bei 190 °C 14–16 Minuten knusprig garen.",
+      "Mit wenig Caesar-Dressing servieren."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Mittel",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "caesar-dressing"
+    ],
+    "image": "chicken_mediterranean.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0483",
+    "key": "taco-kartoffeln-AF-0483",
+    "title": "Taco-Kartoffeln",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 195,
+    "minutes": 20,
+    "preheat": true,
+    "ingredients": [
+      "400 g Kartoffeln",
+      "200 g Rinderhack",
+      "80 g Cheddar",
+      "1 TL Taco-Gewürz",
+      "2 EL Salsa"
+    ],
+    "steps": [
+      "Kartoffeln würfeln und 12 Minuten vorgaren.",
+      "Vorgegartes Hack mit Taco-Gewürz zugeben.",
+      "Käse darübergeben und 4–5 Minuten fertig garen.",
+      "Mit Salsa servieren."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Mittel",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "-gewürz",
+      ""
+    ],
+    "image": "potatoes.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0484",
+    "key": "honig-knoblauch-poulet-AF-0484",
+    "title": "Honig-Knoblauch-Poulet",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 190,
+    "minutes": 16,
+    "preheat": true,
+    "ingredients": [
+      "400 g Pouletbrust",
+      "1 EL Honig",
+      "2 Knoblauchzehen",
+      "2 EL Sojasauce",
+      "1 TL Sesam"
+    ],
+    "steps": [
+      "Poulet würfeln.",
+      "Honig, Knoblauch und Sojasauce verrühren und Poulet marinieren.",
+      "Bei 190 °C 14–16 Minuten garen und zweimal schütteln.",
+      "Mit Sesam bestreuen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Mittel",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "teriyaki.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0485",
+    "key": "chili-cheese-pommes-AF-0485",
+    "title": "Chili-Cheese-Pommes",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 195,
+    "minutes": 22,
+    "preheat": true,
+    "ingredients": [
+      "400 g Kartoffeln",
+      "150 g Rinderhack",
+      "100 g Cheddar",
+      "2 EL Salsa",
+      "1 TL Paprikapulver"
+    ],
+    "steps": [
+      "Kartoffeln zu Pommes schneiden, würzen und ca. 17 Minuten garen.",
+      "Vorgegartes Hack und Salsa darauf verteilen.",
+      "Käse darübergeben und weitere 4–5 Minuten überbacken."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Mittel",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "potatoes.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0486",
+    "key": "parmesan-zucchini-fries-AF-0486",
+    "title": "Parmesan-Zucchini-Fries",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 190,
+    "minutes": 12,
+    "preheat": true,
+    "ingredients": [
+      "2 Zucchini",
+      "40 g Parmesan",
+      "50 g Paniermehl",
+      "1 Ei",
+      "1 TL italienische Kräuter"
+    ],
+    "steps": [
+      "Zucchini in Stifte schneiden.",
+      "In Ei und Parmesan-Paniermehl wenden.",
+      "Bei 190 °C 10–12 Minuten knusprig garen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "chicken_zucchini.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0487",
+    "key": "blumenkohl-buffalo-bites-AF-0487",
+    "title": "Blumenkohl Buffalo Bites",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 190,
+    "minutes": 15,
+    "preheat": true,
+    "ingredients": [
+      "1 kleiner Blumenkohl",
+      "2 EL Buffalo- oder Chilisauce",
+      "1 EL Öl",
+      "40 g Paniermehl"
+    ],
+    "steps": [
+      "Blumenkohl in Röschen teilen.",
+      "Mit Sauce, Öl und Paniermehl vermengen.",
+      "Bei 190 °C 13–15 Minuten garen und einmal schütteln."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "- oder chilisauce",
+      "",
+      ""
     ],
     "image": "veg.jpg",
     "nutrition_estimated": true
   },
   {
-    "id": "AF-0479",
-    "key": "parmesan-kräuter-tofu-mit-peperoni-AF-0479",
-    "title": "Parmesan-Kräuter Tofu mit Peperoni",
-    "category": "Vegetarisch",
+    "id": "AF-0488",
+    "key": "kaese-knoblauch-brot-AF-0488",
+    "title": "Käse-Knoblauch-Brot",
+    "category": "Specials",
     "tags": [
-      "Parmesan-Kräuter",
-      "Peperoni",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 180,
+    "minutes": 8,
+    "preheat": true,
+    "ingredients": [
+      "1 kleines Baguette",
+      "40 g Butter",
+      "2 Knoblauchzehen",
+      "100 g Mozzarella",
+      "1 TL Petersilie"
+    ],
+    "steps": [
+      "Baguette längs halbieren.",
+      "Butter mit Knoblauch mischen und aufstreichen.",
+      "Käse darübergeben und bei 180 °C 6–8 Minuten backen.",
+      "Mit Petersilie bestreuen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "pasta.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0489",
+    "key": "hackbaellchen-caprese-AF-0489",
+    "title": "Hackbällchen Caprese",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 190,
+    "minutes": 14,
+    "preheat": true,
+    "ingredients": [
+      "350 g Rinderhack",
+      "100 g Mini-Mozzarella",
+      "150 g Cherrytomaten",
+      "1 TL italienische Kräuter",
+      "Salz und Pfeffer"
+    ],
+    "steps": [
+      "Hack würzen und kleine Bällchen formen.",
+      "Bei 190 °C 10 Minuten garen.",
+      "Tomaten und Mozzarella zugeben und weitere 3–4 Minuten garen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "-mozzarella",
+      "",
+      "",
+      "salz und pfeffer"
+    ],
+    "image": "meatballs.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0490",
+    "key": "currywurst-bites-mit-kartoffeln-AF-0490",
+    "title": "Currywurst-Bites mit Kartoffeln",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 195,
+    "minutes": 20,
+    "preheat": true,
+    "ingredients": [
+      "300 g Bratwurst",
+      "350 g Kartoffeln",
+      "3 EL Currysauce",
+      "1 TL Currypulver",
+      "1 TL Öl"
+    ],
+    "steps": [
+      "Kartoffeln würfeln und mit Öl 10 Minuten vorgaren.",
+      "Wurst in Stücke schneiden und 7–8 Minuten mitgaren.",
+      "Mit Currysauce und Currypulver vermengen und 2 Minuten fertig garen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Mittel",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "potatoes.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0491",
+    "key": "quesadilla-poulet-kaese-AF-0491",
+    "title": "Quesadilla Poulet & Käse",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 190,
+    "minutes": 9,
+    "preheat": true,
+    "ingredients": [
+      "2 Tortillas",
+      "180 g gegartes Poulet",
+      "120 g Cheddar",
+      "2 EL Mais",
+      "2 EL Salsa"
+    ],
+    "steps": [
+      "Eine Tortilla mit Poulet, Käse, Mais und Salsa belegen.",
+      "Zweite Tortilla auflegen und leicht andrücken.",
+      "Bei 190 °C 7–9 Minuten backen, nach der Hälfte vorsichtig wenden."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "chicken_pepper.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0492",
+    "key": "smashed-potatoes-parmesan-AF-0492",
+    "title": "Smashed Potatoes Parmesan",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 200,
+    "minutes": 18,
+    "preheat": true,
+    "ingredients": [
+      "500 g kleine vorgekochte Kartoffeln",
+      "1 EL Olivenöl",
+      "40 g Parmesan",
+      "1 TL Knoblauchpulver",
+      "Salz"
+    ],
+    "steps": [
+      "Vorgekochte Kartoffeln flach drücken.",
+      "Mit Öl, Knoblauch und Salz würzen.",
+      "Bei 200 °C 14 Minuten rösten.",
+      "Parmesan darübergeben und weitere 3–4 Minuten knusprig garen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Mittel",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      "salz"
+    ],
+    "image": "potato_parmesan.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0493",
+    "key": "mediterrane-feta-peperoni-AF-0493",
+    "title": "Mediterrane Feta-Peperoni",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 185,
+    "minutes": 14,
+    "preheat": true,
+    "ingredients": [
+      "2 Peperoni",
+      "180 g Feta",
+      "150 g Cherrytomaten",
+      "1 TL Oregano",
+      "1 TL Olivenöl"
+    ],
+    "steps": [
+      "Peperoni halbieren und entkernen.",
+      "Mit Feta und Tomaten füllen, würzen und leicht ölen.",
+      "Bei 185 °C 12–14 Minuten garen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "image": "stuffed_pepper.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0494",
+    "key": "poulet-bacon-roellchen-AF-0494",
+    "title": "Poulet-Bacon-Röllchen",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
@@ -24871,883 +25459,132 @@
     "minutes": 18,
     "preheat": true,
     "ingredients": [
-      "400 g Tofu",
-      "250 g Peperoni",
-      "1 EL Olivenöl",
-      "25 g Parmesan",
-      "1 TL italienische Kräuter",
-      "1/2 TL Knoblauchgranulat",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Tofu und Peperoni vorbereiten.",
-      "Mit Parmesan, Kräutern und Knoblauch vermengen.",
-      "Peperoni in breite Streifen schneiden und zusammen mit der Hauptzutat garen.",
-      "Bei 190 °C insgesamt etwa 18 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 440,
-      "protein_g": 24,
-      "carbs_g": 42,
-      "fat_g": 25
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "tofu",
-      "peperoni",
-      "olivenöl",
-      "parmesan",
-      "italienische kräuter",
-      "/2 tl knoblauchgranulat",
-      "salz nach geschmack"
-    ],
-    "image": "peppers.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0480",
-    "key": "zitrone-pfeffer-tofu-mit-zucchini-AF-0480",
-    "title": "Zitrone-Pfeffer Tofu mit Zucchini",
-    "category": "Vegetarisch",
-    "tags": [
-      "Zitrone-Pfeffer",
-      "Zucchini",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 185,
-    "minutes": 17,
-    "preheat": true,
-    "ingredients": [
-      "400 g Tofu",
-      "250 g Zucchini",
-      "1 EL Olivenöl",
-      "1 EL Zitronensaft",
-      "1 TL Zitronenabrieb",
-      "1/2 TL schwarzer Pfeffer",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Tofu und Zucchini vorbereiten.",
-      "Mit Zitrone und schwarzem Pfeffer frisch marinieren.",
-      "Zucchini etwas dicker schneiden und erst nach 5 Minuten dazugeben.",
-      "Bei 185 °C insgesamt etwa 17 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 465,
-      "protein_g": 24,
-      "carbs_g": 46,
-      "fat_g": 28
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "tofu",
-      "zucchini",
-      "olivenöl",
-      "zitronensaft",
-      "zitronenabrieb",
-      "/2 tl schwarzer pfeffer",
-      "salz nach geschmack"
-    ],
-    "image": "veg.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0481",
-    "key": "knoblauch-kräuter-kichererbsen-mit-kartoffeln-AF-0481",
-    "title": "Knoblauch-Kräuter Kichererbsen mit Kartoffeln",
-    "category": "Vegetarisch",
-    "tags": [
-      "Knoblauch-Kräuter",
-      "Kartoffeln",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 195,
-    "minutes": 22,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Kartoffeln",
-      "1 EL Olivenöl",
-      "1 TL Knoblauchgranulat",
-      "1 TL italienische Kräuter",
-      "1 TL Zitronensaft",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Kartoffeln vorbereiten.",
-      "Mit Knoblauch, Kräutern und Zitronensaft marinieren.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 22 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 490,
-      "protein_g": 18,
-      "carbs_g": 18,
-      "fat_g": 13
-    },
-    "emoji": "🥦",
-    "difficulty": "Mittel",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "kartoffeln",
-      "olivenöl",
-      "knoblauchgranulat",
-      "italienische kräuter",
-      "zitronensaft",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0482",
-    "key": "smoky-bbq-kichererbsen-mit-kartoffeln-AF-0482",
-    "title": "Smoky BBQ Kichererbsen mit Kartoffeln",
-    "category": "Vegetarisch",
-    "tags": [
-      "Smoky BBQ",
-      "Kartoffeln",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 195,
-    "minutes": 22,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Kartoffeln",
-      "1 EL Olivenöl",
-      "1 EL BBQ-Sauce",
-      "1 TL geräuchertes Paprikapulver",
-      "1/2 TL Zwiebelpulver",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Kartoffeln vorbereiten.",
-      "Mit BBQ-Sauce, Rauchpaprika und Zwiebelpulver vermengen.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 22 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 515,
-      "protein_g": 18,
-      "carbs_g": 22,
-      "fat_g": 16
-    },
-    "emoji": "🥦",
-    "difficulty": "Mittel",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "kartoffeln",
-      "olivenöl",
-      "bbq-sauce",
-      "geräuchertes paprikapulver",
-      "/2 tl zwiebelpulver",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0483",
-    "key": "honig-senf-kichererbsen-mit-gemüse-AF-0483",
-    "title": "Honig-Senf Kichererbsen mit Gemüse",
-    "category": "Vegetarisch",
-    "tags": [
-      "Honig-Senf",
-      "Gemüse",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 190,
-    "minutes": 17,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Gemüse",
-      "1 EL Olivenöl",
-      "1 TL Honig",
-      "1 EL Senf",
-      "1/2 TL Thymian",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Gemüse vorbereiten.",
-      "Honig, Senf und Thymian verrühren und die Hauptzutaten damit marinieren.",
-      "Gemüse in ähnlich große Stücke schneiden und den Korb während des Garens zweimal schütteln.",
-      "Bei 190 °C insgesamt etwa 17 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 540,
-      "protein_g": 18,
-      "carbs_g": 26,
-      "fat_g": 19
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "gemüse",
-      "olivenöl",
-      "honig",
-      "senf",
-      "/2 tl thymian",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0484",
-    "key": "mediterran-kichererbsen-mit-brokkoli-AF-0484",
-    "title": "Mediterran Kichererbsen mit Brokkoli",
-    "category": "Vegetarisch",
-    "tags": [
-      "Mediterran",
-      "Brokkoli",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 185,
-    "minutes": 14,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Brokkoli",
-      "1 EL Olivenöl",
-      "1 TL Oregano",
-      "1 TL Basilikum",
-      "1 TL Zitronensaft",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Brokkoli vorbereiten.",
-      "Mit Oregano, Basilikum und etwas Zitrone mediterran würzen.",
-      "Brokkoli erst nach etwa der Hälfte der Garzeit dazugeben, damit er bissfest bleibt.",
-      "Bei 185 °C insgesamt etwa 14 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 390,
-      "protein_g": 18,
-      "carbs_g": 30,
-      "fat_g": 22
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "brokkoli",
-      "olivenöl",
-      "oregano",
-      "basilikum",
-      "zitronensaft",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0485",
-    "key": "curry-joghurt-kichererbsen-mit-peperoni-AF-0485",
-    "title": "Curry-Joghurt Kichererbsen mit Peperoni",
-    "category": "Vegetarisch",
-    "tags": [
-      "Curry-Joghurt",
-      "Peperoni",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 190,
-    "minutes": 16,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Peperoni",
-      "1 EL Olivenöl",
-      "2 EL Naturjoghurt",
-      "1 TL Currypulver",
-      "1/2 TL Kurkuma",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Peperoni vorbereiten.",
-      "Joghurt mit Curry und Kurkuma verrühren und alles darin marinieren.",
-      "Peperoni in breite Streifen schneiden und zusammen mit der Hauptzutat garen.",
-      "Bei 190 °C insgesamt etwa 16 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 415,
-      "protein_g": 18,
-      "carbs_g": 34,
-      "fat_g": 25
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "peperoni",
-      "olivenöl",
-      "naturjoghurt",
-      "currypulver",
-      "/2 tl kurkuma",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0486",
-    "key": "sweet-chili-kichererbsen-mit-zucchini-AF-0486",
-    "title": "Sweet Chili Kichererbsen mit Zucchini",
-    "category": "Vegetarisch",
-    "tags": [
-      "Sweet Chili",
-      "Zucchini",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 185,
-    "minutes": 15,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Zucchini",
-      "1 EL Olivenöl",
-      "1 EL Sweet-Chili-Sauce",
-      "1 TL Limettensaft",
-      "1/2 TL Knoblauchgranulat",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Zucchini vorbereiten.",
-      "Mit Sweet-Chili, Limette und Knoblauch marinieren.",
-      "Zucchini etwas dicker schneiden und erst nach 5 Minuten dazugeben.",
-      "Bei 185 °C insgesamt etwa 15 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 440,
-      "protein_g": 18,
-      "carbs_g": 38,
-      "fat_g": 28
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "zucchini",
-      "olivenöl",
-      "sweet-chili-sauce",
-      "limettensaft",
-      "/2 tl knoblauchgranulat",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0487",
-    "key": "paprika-kräuter-kichererbsen-mit-kartoffeln-AF-0487",
-    "title": "Paprika-Kräuter Kichererbsen mit Kartoffeln",
-    "category": "Vegetarisch",
-    "tags": [
-      "Paprika-Kräuter",
-      "Kartoffeln",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 195,
-    "minutes": 22,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Kartoffeln",
-      "1 EL Olivenöl",
+      "350 g Pouletbrust",
+      "8 Scheiben Speck",
       "1 TL Paprikapulver",
-      "1/2 TL Rosmarin",
-      "1/2 TL Thymian",
-      "Salz nach Geschmack"
+      "Pfeffer"
     ],
     "steps": [
-      "Kichererbsen und Kartoffeln vorbereiten.",
-      "Mit Paprika, Rosmarin und Thymian kräftig würzen.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 22 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Poulet in dicke Streifen schneiden und würzen.",
+      "Jeden Streifen mit Speck umwickeln.",
+      "Bei 190 °C 16–18 Minuten garen und einmal wenden."
     ],
     "nutrition": {
-      "kcal": 465,
-      "protein_g": 18,
-      "carbs_g": 42,
-      "fat_g": 13
+      "kcal": 420,
+      "protein_g": 35,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Mittel",
     "favorite": false,
     "ingredient_keys": [
-      "kichererbsen",
-      "kartoffeln",
-      "olivenöl",
-      "paprikapulver",
-      "/2 tl rosmarin",
-      "/2 tl thymian",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "pfeffer"
     ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0488",
-    "key": "tex-mex-kichererbsen-mit-kartoffeln-AF-0488",
-    "title": "Tex-Mex Kichererbsen mit Kartoffeln",
-    "category": "Vegetarisch",
-    "tags": [
-      "Tex-Mex",
-      "Kartoffeln",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 195,
-    "minutes": 22,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Kartoffeln",
-      "1 EL Olivenöl",
-      "1 TL Kreuzkümmel",
-      "1 TL Paprikapulver",
-      "1/2 TL Chiliflocken",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Kartoffeln vorbereiten.",
-      "Mit Kreuzkümmel, Paprika und Chili Tex-Mex würzen.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 22 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 490,
-      "protein_g": 18,
-      "carbs_g": 46,
-      "fat_g": 16
-    },
-    "emoji": "🥦",
-    "difficulty": "Mittel",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "kartoffeln",
-      "olivenöl",
-      "kreuzkümmel",
-      "paprikapulver",
-      "/2 tl chiliflocken",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0489",
-    "key": "parmesan-kräuter-kichererbsen-mit-gemüse-AF-0489",
-    "title": "Parmesan-Kräuter Kichererbsen mit Gemüse",
-    "category": "Vegetarisch",
-    "tags": [
-      "Parmesan-Kräuter",
-      "Gemüse",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 190,
-    "minutes": 17,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Gemüse",
-      "1 EL Olivenöl",
-      "25 g Parmesan",
-      "1 TL italienische Kräuter",
-      "1/2 TL Knoblauchgranulat",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Gemüse vorbereiten.",
-      "Mit Parmesan, Kräutern und Knoblauch vermengen.",
-      "Gemüse in ähnlich große Stücke schneiden und den Korb während des Garens zweimal schütteln.",
-      "Bei 190 °C insgesamt etwa 17 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 515,
-      "protein_g": 18,
-      "carbs_g": 18,
-      "fat_g": 19
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "gemüse",
-      "olivenöl",
-      "parmesan",
-      "italienische kräuter",
-      "/2 tl knoblauchgranulat",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0490",
-    "key": "zitrone-pfeffer-kichererbsen-mit-brokkoli-AF-0490",
-    "title": "Zitrone-Pfeffer Kichererbsen mit Brokkoli",
-    "category": "Vegetarisch",
-    "tags": [
-      "Zitrone-Pfeffer",
-      "Brokkoli",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 185,
-    "minutes": 14,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Brokkoli",
-      "1 EL Olivenöl",
-      "1 EL Zitronensaft",
-      "1 TL Zitronenabrieb",
-      "1/2 TL schwarzer Pfeffer",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Brokkoli vorbereiten.",
-      "Mit Zitrone und schwarzem Pfeffer frisch marinieren.",
-      "Brokkoli erst nach etwa der Hälfte der Garzeit dazugeben, damit er bissfest bleibt.",
-      "Bei 185 °C insgesamt etwa 14 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 540,
-      "protein_g": 18,
-      "carbs_g": 22,
-      "fat_g": 22
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "brokkoli",
-      "olivenöl",
-      "zitronensaft",
-      "zitronenabrieb",
-      "/2 tl schwarzer pfeffer",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0491",
-    "key": "knoblauch-kräuter-kichererbsen-mit-peperoni-AF-0491",
-    "title": "Knoblauch-Kräuter Kichererbsen mit Peperoni",
-    "category": "Vegetarisch",
-    "tags": [
-      "Knoblauch-Kräuter",
-      "Peperoni",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 190,
-    "minutes": 16,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Peperoni",
-      "1 EL Olivenöl",
-      "1 TL Knoblauchgranulat",
-      "1 TL italienische Kräuter",
-      "1 TL Zitronensaft",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Peperoni vorbereiten.",
-      "Mit Knoblauch, Kräutern und Zitronensaft marinieren.",
-      "Peperoni in breite Streifen schneiden und zusammen mit der Hauptzutat garen.",
-      "Bei 190 °C insgesamt etwa 16 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 390,
-      "protein_g": 18,
-      "carbs_g": 26,
-      "fat_g": 25
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "peperoni",
-      "olivenöl",
-      "knoblauchgranulat",
-      "italienische kräuter",
-      "zitronensaft",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0492",
-    "key": "smoky-bbq-kichererbsen-mit-zucchini-AF-0492",
-    "title": "Smoky BBQ Kichererbsen mit Zucchini",
-    "category": "Vegetarisch",
-    "tags": [
-      "Smoky BBQ",
-      "Zucchini",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 185,
-    "minutes": 15,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Zucchini",
-      "1 EL Olivenöl",
-      "1 EL BBQ-Sauce",
-      "1 TL geräuchertes Paprikapulver",
-      "1/2 TL Zwiebelpulver",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Zucchini vorbereiten.",
-      "Mit BBQ-Sauce, Rauchpaprika und Zwiebelpulver vermengen.",
-      "Zucchini etwas dicker schneiden und erst nach 5 Minuten dazugeben.",
-      "Bei 185 °C insgesamt etwa 15 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 415,
-      "protein_g": 18,
-      "carbs_g": 30,
-      "fat_g": 28
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "zucchini",
-      "olivenöl",
-      "bbq-sauce",
-      "geräuchertes paprikapulver",
-      "/2 tl zwiebelpulver",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0493",
-    "key": "honig-senf-kichererbsen-mit-kartoffeln-AF-0493",
-    "title": "Honig-Senf Kichererbsen mit Kartoffeln",
-    "category": "Vegetarisch",
-    "tags": [
-      "Honig-Senf",
-      "Kartoffeln",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 195,
-    "minutes": 22,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Kartoffeln",
-      "1 EL Olivenöl",
-      "1 TL Honig",
-      "1 EL Senf",
-      "1/2 TL Thymian",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Kartoffeln vorbereiten.",
-      "Honig, Senf und Thymian verrühren und die Hauptzutaten damit marinieren.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 22 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 440,
-      "protein_g": 18,
-      "carbs_g": 34,
-      "fat_g": 13
-    },
-    "emoji": "🥦",
-    "difficulty": "Mittel",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "kartoffeln",
-      "olivenöl",
-      "honig",
-      "senf",
-      "/2 tl thymian",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0494",
-    "key": "mediterran-kichererbsen-mit-kartoffeln-AF-0494",
-    "title": "Mediterran Kichererbsen mit Kartoffeln",
-    "category": "Vegetarisch",
-    "tags": [
-      "Mediterran",
-      "Kartoffeln",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 195,
-    "minutes": 22,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Kartoffeln",
-      "1 EL Olivenöl",
-      "1 TL Oregano",
-      "1 TL Basilikum",
-      "1 TL Zitronensaft",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Kartoffeln vorbereiten.",
-      "Mit Oregano, Basilikum und etwas Zitrone mediterran würzen.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 22 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 465,
-      "protein_g": 18,
-      "carbs_g": 38,
-      "fat_g": 16
-    },
-    "emoji": "🥦",
-    "difficulty": "Mittel",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "kartoffeln",
-      "olivenöl",
-      "oregano",
-      "basilikum",
-      "zitronensaft",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
+    "image": "bbq_wings.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0495",
-    "key": "curry-joghurt-kichererbsen-mit-gemüse-AF-0495",
-    "title": "Curry-Joghurt Kichererbsen mit Gemüse",
-    "category": "Vegetarisch",
+    "key": "sweet-chili-halloumi-AF-0495",
+    "title": "Sweet-Chili-Halloumi",
+    "category": "Specials",
     "tags": [
-      "Curry-Joghurt",
-      "Gemüse",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
     "temperature": 190,
-    "minutes": 17,
+    "minutes": 11,
     "preheat": true,
     "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Gemüse",
-      "1 EL Olivenöl",
-      "2 EL Naturjoghurt",
-      "1 TL Currypulver",
-      "1/2 TL Kurkuma",
-      "Salz nach Geschmack"
+      "250 g Halloumi",
+      "2 EL Sweet-Chili-Sauce",
+      "1 TL Limettensaft",
+      "1 TL Sesam"
     ],
     "steps": [
-      "Kichererbsen und Gemüse vorbereiten.",
-      "Joghurt mit Curry und Kurkuma verrühren und alles darin marinieren.",
-      "Gemüse in ähnlich große Stücke schneiden und den Korb während des Garens zweimal schütteln.",
-      "Bei 190 °C insgesamt etwa 17 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Halloumi würfeln.",
+      "Bei 190 °C 8 Minuten rösten.",
+      "Mit Sweet-Chili und Limette vermengen und 2–3 Minuten karamellisieren.",
+      "Mit Sesam servieren."
     ],
     "nutrition": {
-      "kcal": 490,
-      "protein_g": 18,
-      "carbs_g": 42,
-      "fat_g": 19
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "kichererbsen",
-      "gemüse",
-      "olivenöl",
-      "naturjoghurt",
-      "currypulver",
-      "/2 tl kurkuma",
-      "salz nach geschmack"
+      "",
+      "-chili-sauce",
+      "",
+      ""
     ],
-    "image": "falafel.jpg",
+    "image": "halloumi_veg.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0496",
-    "key": "sweet-chili-kichererbsen-mit-brokkoli-AF-0496",
-    "title": "Sweet Chili Kichererbsen mit Brokkoli",
-    "category": "Vegetarisch",
+    "key": "knusprige-ravioli-AF-0496",
+    "title": "Knusprige Ravioli",
+    "category": "Specials",
     "tags": [
-      "Sweet Chili",
-      "Brokkoli",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
+      "Airfryer"
+    ],
+    "portions": 2,
+    "temperature": 190,
+    "minutes": 10,
+    "preheat": true,
+    "ingredients": [
+      "300 g frische Ravioli",
+      "1 Ei",
+      "60 g Paniermehl",
+      "25 g Parmesan",
+      "Tomatensauce zum Dippen"
+    ],
+    "steps": [
+      "Ravioli in Ei und Parmesan-Paniermehl wenden.",
+      "Leicht mit Öl besprühen.",
+      "Bei 190 °C 8–10 Minuten knusprig garen.",
+      "Mit Tomatensauce dippen."
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
+    },
+    "emoji": "✨",
+    "difficulty": "Einfach",
+    "favorite": false,
+    "ingredient_keys": [
+      "",
+      "",
+      "",
+      "",
+      "tomatensauce zum dippen"
+    ],
+    "image": "pasta.jpg",
+    "nutrition_estimated": true
+  },
+  {
+    "id": "AF-0497",
+    "key": "pizza-peperoni-gefuellt-AF-0497",
+    "title": "Pizza-Peperoni gefüllt",
+    "category": "Specials",
+    "tags": [
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
@@ -25755,248 +25592,167 @@
     "minutes": 14,
     "preheat": true,
     "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Brokkoli",
-      "1 EL Olivenöl",
-      "1 EL Sweet-Chili-Sauce",
-      "1 TL Limettensaft",
-      "1/2 TL Knoblauchgranulat",
-      "Salz nach Geschmack"
+      "2 Peperoni",
+      "120 g Mozzarella",
+      "100 g Tomatensauce",
+      "80 g Schinken",
+      "1 TL Oregano"
     ],
     "steps": [
-      "Kichererbsen und Brokkoli vorbereiten.",
-      "Mit Sweet-Chili, Limette und Knoblauch marinieren.",
-      "Brokkoli erst nach etwa der Hälfte der Garzeit dazugeben, damit er bissfest bleibt.",
-      "Bei 185 °C insgesamt etwa 14 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Peperoni halbieren und entkernen.",
+      "Mit Tomatensauce, Schinken und Mozzarella füllen.",
+      "Mit Oregano würzen und bei 185 °C 12–14 Minuten garen."
     ],
     "nutrition": {
-      "kcal": 515,
-      "protein_g": 18,
-      "carbs_g": 46,
-      "fat_g": 22
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "kichererbsen",
-      "brokkoli",
-      "olivenöl",
-      "sweet-chili-sauce",
-      "limettensaft",
-      "/2 tl knoblauchgranulat",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
-    "image": "falafel.jpg",
-    "nutrition_estimated": true
-  },
-  {
-    "id": "AF-0497",
-    "key": "paprika-kräuter-kichererbsen-mit-peperoni-AF-0497",
-    "title": "Paprika-Kräuter Kichererbsen mit Peperoni",
-    "category": "Vegetarisch",
-    "tags": [
-      "Paprika-Kräuter",
-      "Peperoni",
-      "Vegetarisch",
-      "Airfryer"
-    ],
-    "portions": 2,
-    "temperature": 190,
-    "minutes": 16,
-    "preheat": true,
-    "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Peperoni",
-      "1 EL Olivenöl",
-      "1 TL Paprikapulver",
-      "1/2 TL Rosmarin",
-      "1/2 TL Thymian",
-      "Salz nach Geschmack"
-    ],
-    "steps": [
-      "Kichererbsen und Peperoni vorbereiten.",
-      "Mit Paprika, Rosmarin und Thymian kräftig würzen.",
-      "Peperoni in breite Streifen schneiden und zusammen mit der Hauptzutat garen.",
-      "Bei 190 °C insgesamt etwa 16 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
-    ],
-    "nutrition": {
-      "kcal": 540,
-      "protein_g": 18,
-      "carbs_g": 18,
-      "fat_g": 25
-    },
-    "emoji": "🥦",
-    "difficulty": "Einfach",
-    "favorite": false,
-    "ingredient_keys": [
-      "kichererbsen",
-      "peperoni",
-      "olivenöl",
-      "paprikapulver",
-      "/2 tl rosmarin",
-      "/2 tl thymian",
-      "salz nach geschmack"
-    ],
-    "image": "falafel.jpg",
+    "image": "stuffed_pepper.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0498",
-    "key": "tex-mex-kichererbsen-mit-zucchini-AF-0498",
-    "title": "Tex-Mex Kichererbsen mit Zucchini",
-    "category": "Vegetarisch",
+    "key": "zimt-bananen-bites-AF-0498",
+    "title": "Zimt-Bananen-Bites",
+    "category": "Specials",
     "tags": [
-      "Tex-Mex",
-      "Zucchini",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
-    "temperature": 185,
-    "minutes": 15,
+    "temperature": 180,
+    "minutes": 8,
     "preheat": true,
     "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Zucchini",
-      "1 EL Olivenöl",
-      "1 TL Kreuzkümmel",
-      "1 TL Paprikapulver",
-      "1/2 TL Chiliflocken",
-      "Salz nach Geschmack"
+      "2 Bananen",
+      "1 TL Zimt",
+      "1 TL Honig",
+      "20 g gehackte Nüsse optional"
     ],
     "steps": [
-      "Kichererbsen und Zucchini vorbereiten.",
-      "Mit Kreuzkümmel, Paprika und Chili Tex-Mex würzen.",
-      "Zucchini etwas dicker schneiden und erst nach 5 Minuten dazugeben.",
-      "Bei 185 °C insgesamt etwa 15 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Bananen in dicke Scheiben schneiden.",
+      "Mit Zimt und wenig Honig vermengen.",
+      "Bei 180 °C 6–8 Minuten karamellisieren.",
+      "Optional mit Nüssen servieren."
     ],
     "nutrition": {
-      "kcal": 390,
-      "protein_g": 18,
-      "carbs_g": 22,
-      "fat_g": 28
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
+    "emoji": "✨",
     "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "kichererbsen",
-      "zucchini",
-      "olivenöl",
-      "kreuzkümmel",
-      "paprikapulver",
-      "/2 tl chiliflocken",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      ""
     ],
-    "image": "falafel.jpg",
+    "image": "applechips.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0499",
-    "key": "parmesan-kräuter-kichererbsen-mit-kartoffeln-AF-0499",
-    "title": "Parmesan-Kräuter Kichererbsen mit Kartoffeln",
-    "category": "Vegetarisch",
+    "key": "schoko-blaetterteig-roellchen-AF-0499",
+    "title": "Schoko-Blätterteig-Röllchen",
+    "category": "Specials",
     "tags": [
-      "Parmesan-Kräuter",
-      "Kartoffeln",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
-    "temperature": 195,
-    "minutes": 22,
+    "temperature": 180,
+    "minutes": 10,
     "preheat": true,
     "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Kartoffeln",
-      "1 EL Olivenöl",
-      "25 g Parmesan",
-      "1 TL italienische Kräuter",
-      "1/2 TL Knoblauchgranulat",
-      "Salz nach Geschmack"
+      "1 Blätterteig",
+      "80 g Schokolade",
+      "1 Ei zum Bestreichen"
     ],
     "steps": [
-      "Kichererbsen und Kartoffeln vorbereiten.",
-      "Mit Parmesan, Kräutern und Knoblauch vermengen.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 22 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Blätterteig in Streifen schneiden und mit Schokolade belegen.",
+      "Aufrollen und mit Ei bestreichen.",
+      "Bei 180 °C 8–10 Minuten goldbraun backen."
     ],
     "nutrition": {
-      "kcal": 415,
-      "protein_g": 18,
-      "carbs_g": 26,
-      "fat_g": 13
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
-    "difficulty": "Mittel",
+    "emoji": "✨",
+    "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "kichererbsen",
-      "kartoffeln",
-      "olivenöl",
-      "parmesan",
-      "italienische kräuter",
-      "/2 tl knoblauchgranulat",
-      "salz nach geschmack"
+      "",
+      "",
+      ""
     ],
-    "image": "falafel.jpg",
+    "image": "applechips.jpg",
     "nutrition_estimated": true
   },
   {
     "id": "AF-0500",
-    "key": "zitrone-pfeffer-kichererbsen-mit-kartoffeln-AF-0500",
-    "title": "Zitrone-Pfeffer Kichererbsen mit Kartoffeln",
-    "category": "Vegetarisch",
+    "key": "bruschetta-baguette-AF-0500",
+    "title": "Bruschetta-Baguette",
+    "category": "Specials",
     "tags": [
-      "Zitrone-Pfeffer",
-      "Kartoffeln",
-      "Vegetarisch",
+      "Specials",
+      "Specials",
       "Airfryer"
     ],
     "portions": 2,
-    "temperature": 195,
-    "minutes": 22,
+    "temperature": 185,
+    "minutes": 8,
     "preheat": true,
     "ingredients": [
-      "400 g Kichererbsen",
-      "250 g Kartoffeln",
+      "1 kleines Baguette",
+      "2 Tomaten",
+      "1 Knoblauchzehe",
       "1 EL Olivenöl",
-      "1 EL Zitronensaft",
-      "1 TL Zitronenabrieb",
-      "1/2 TL schwarzer Pfeffer",
-      "Salz nach Geschmack"
+      "Basilikum",
+      "Salz"
     ],
     "steps": [
-      "Kichererbsen und Kartoffeln vorbereiten.",
-      "Mit Zitrone und schwarzem Pfeffer frisch marinieren.",
-      "Kartoffeln klein würfeln und 8 Minuten vorgaren; danach die Hauptzutat dazugeben.",
-      "Bei 195 °C insgesamt etwa 22 Minuten airfryen. Zwischendurch wenden bzw. schütteln.",
-      "Gargrad prüfen, kurz ruhen lassen und servieren."
+      "Baguette in Scheiben schneiden und 3 Minuten anrösten.",
+      "Tomaten, Knoblauch, Öl und Salz mischen.",
+      "Auf die Scheiben geben und weitere 3–5 Minuten garen.",
+      "Mit Basilikum servieren."
     ],
     "nutrition": {
-      "kcal": 440,
-      "protein_g": 18,
-      "carbs_g": 30,
-      "fat_g": 16
+      "kcal": 420,
+      "protein_g": 15,
+      "carbs_g": 32,
+      "fat_g": 20
     },
-    "emoji": "🥦",
-    "difficulty": "Mittel",
+    "emoji": "✨",
+    "difficulty": "Einfach",
     "favorite": false,
     "ingredient_keys": [
-      "kichererbsen",
-      "kartoffeln",
-      "olivenöl",
-      "zitronensaft",
-      "zitronenabrieb",
-      "/2 tl schwarzer pfeffer",
-      "salz nach geschmack"
+      "",
+      "",
+      "",
+      "",
+      "basilikum",
+      "salz"
     ],
-    "image": "falafel.jpg",
+    "image": "pasta.jpg",
     "nutrition_estimated": true
   }
 ]
