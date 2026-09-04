@@ -1,7 +1,7 @@
 {
   "name": "AirFry",
   "short_name": "AirFry",
-  "description": "AirFryer Rezepte, Wochenplan, Einkaufsliste, Koch-Timer und eigene Rezepte",
+  "description": "AirFryer Rezepte mit smarter Wochenplanung, Einkaufsliste, Koch-Timer und Kochhistorie",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
