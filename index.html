@@ -49,7 +49,7 @@ main{padding:18px}
 .empty{text-align:center;color:var(--muted);padding:40px 10px}
 .bottom{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(820px,100%);display:grid;grid-template-columns:repeat(4,1fr);background:rgba(20,20,22,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom));z-index:50}
 .navbtn{border:0;background:transparent;color:#9a9aa1;padding:7px 4px;font-size:11px}.navbtn .n{font-size:20px;display:block;margin-bottom:2px}.navbtn.active{color:var(--accent)}
-#detail{display:none}
+#detail{display:none;position:fixed;inset:0;z-index:100000;background:#0f0f10;overflow-y:auto;overflow-x:hidden;padding-bottom:110px;-webkit-overflow-scrolling:touch}
 .detailtop{padding:16px 18px 8px;display:flex;align-items:center;justify-content:space-between}
 .back,.favbtn{border:0;background:#202024;color:#fff;border-radius:12px;padding:10px 12px}
 .detailhero{margin:0 18px;height:190px;border-radius:24px;background:linear-gradient(135deg,#2a2a30,#18181d);display:grid;place-items:center;font-size:80px;border:1px solid var(--line)}
@@ -179,6 +179,21 @@ linear-gradient(135deg,#2b1e18,#17181b)}
 .weekRecipeCard img{width:76px!important;height:68px!important;object-fit:cover!important;border-radius:11px!important}
 .weekRecipeCard .p{min-width:0!important;padding:0!important}.weekRecipeCard h4{font-size:15px!important;line-height:1.25!important;margin:0 0 7px!important;color:#fff!important}.weekRecipeCard .meta{font-size:12px!important;color:#aaa!important}.pickArrow{font-size:30px!important;color:#ff6a00!important;justify-self:end!important}.cookedBadge{font-size:11px!important;color:#79d68a!important;margin-top:5px!important}
 #pwaTools{display:none!important}
+
+/* v1.8 Suche & Touch */
+#home.searchMode .heroBanner,
+#home.searchMode .featureGrid,
+#home.searchMode #popularTitle,
+#home.searchMode #popularCards,
+#home.searchMode #quickCards,
+#home.searchMode .v7main > .section-title:not(#allRecipesTitle):not(#popularTitle){display:none!important}
+#home.searchMode #discoverNotice{display:none!important}
+#home.searchMode .v7main{padding-top:12px!important}
+#home.searchMode #allRecipesTitle{margin-top:0!important}
+#home.searchMode #allRecipesTitle h2::after{content:"Suchergebnisse";font-size:0}
+.card{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.card:active,.featureCard:active,.topcat:active,.openbtn:active,.weekRecipeCard:active{transform:scale(.985)}
+.openbtn,.featureCard,.topcat,.chip,.weekRecipeCard,.profile,.back{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 </style>
 <meta name="theme-color" content="#f47b20">
 <link rel="manifest" href="./manifest.json">
@@ -190,7 +205,7 @@ linear-gradient(135deg,#2b1e18,#17181b)}
 #pwaTools{display:none!important}
 #updateToast{display:none;position:fixed;left:12px;right:12px;bottom:82px;z-index:10000;background:#202020;color:#fff;padding:13px 14px;border-radius:14px;box-shadow:0 5px 25px #0008}
 #updateToast button{float:right;border:0;border-radius:9px;padding:7px 10px;font-weight:800}
-</style><meta name="airfry-version" content="1.6-finalfix"></head>
+</style><meta name="airfry-version" content="1.9-clickfix"></head>
 <body>
 <div class="app">
 
@@ -344,7 +359,7 @@ linear-gradient(135deg,#2b1e18,#17181b)}
      </div>
    </div>
    <div class="match">
-     <b>📱 AirFry v1.5.2</b>
+     <b>📱 AirFry v1.9</b>
      <div class="meta" style="margin-top:7px">500 Rezepte · Wochenplan · Einkaufsliste · Kochmodus · eigene Rezepte · Offline-PWA</div>
    </div>
  </div>
@@ -441,20 +456,26 @@ function filtered(){
   return arr;
 }
 function render(){
-  const a=filtered(); rc.textContent=a.length+" Treffer";
+  const a=filtered();
+  const activeSearch=!!q.value.trim() || !!cat || filter!=="all";
+  const home=document.getElementById("home");
+  if(home) home.classList.toggle("searchMode",activeSearch);
+  const title=document.querySelector("#allRecipesTitle h2");
+  if(title) title.textContent=activeSearch?"Suchergebnisse":"Alle Rezepte";
+  rc.textContent=a.length+" Treffer";
   if(!a.length){cards.innerHTML='<div class="empty">Keine Rezepte gefunden.</div>';return}
   cards.innerHTML=a.slice(0,80).map(r=>`
-    <article class="card">
+    <article class="card" onclick="openRecipe('${r.id}')">
       <div class="foodpic"><img class="recipeImg" src="${r.image}" alt="${r.title}"><div class="photoShade"></div><div class="badge">${r.category}</div>
       <button class="heart" onclick="toggleFav(event,'${r.id}')">${favs.has(r.id)?"♥":"♡"}</button></div>
       <div class="cardbody">
         <h3>${r.title}</h3>
         <div class="meta"><span>⏱ ${r.minutes} Min.</span><span>🔥 ${r.temperature} °C</span></div>
-        <button class="openbtn" onclick="openRecipe('${r.id}')">Rezept ansehen</button>
+        <button class="openbtn" onclick="event.stopPropagation();openRecipe('${r.id}')">Rezept ansehen</button>
       </div>
     </article>`).join("");
 }
-q.oninput=render;
+q.addEventListener("input",()=>{cat="";filter="all";setTopAllActive();render();});
 document.querySelectorAll(".cat").forEach(el=>el.onclick=()=>{
   document.querySelectorAll(".cat").forEach(x=>x.classList.remove("active"));
   el.classList.add("active");cat=el.dataset.cat;render();
@@ -735,7 +756,7 @@ document.querySelectorAll(".topcat").forEach(el=>el.onclick=()=>{
   else if(el.dataset.search){cat="";filter="all";q.value=el.dataset.search}
   else {cat="";filter="all";q.value=""}
   render();
-  document.getElementById("popularTitle").scrollIntoView({behavior:"smooth"});
+  document.getElementById("allRecipesTitle").scrollIntoView({behavior:"smooth",block:"start"});
 });
 
 
