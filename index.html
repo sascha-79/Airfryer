@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>AirFry</title>
+<link rel="manifest" href="manifest.json">
+<style>
+:root{
+  --bg:#0f0f10;--panel:#171719;--panel2:#202024;--text:#fff;--muted:#a7a7ad;
+  --accent:#ff5a1f;--accent2:#ff8a3d;--soft:#2a2a2f;--line:#303036;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#0d0d0e,#151516 40%,#0d0d0e);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.app{max-width:820px;margin:auto;min-height:100vh;padding-bottom:88px}
+.hero{padding:24px 18px 18px;background:radial-gradient(circle at 85% 10%,rgba(255,90,31,.2),transparent 34%),linear-gradient(180deg,#171719,#111113);border-bottom:1px solid var(--line)}
+.brandrow{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-size:28px;font-weight:900;letter-spacing:-.6px}
+.logo span{color:var(--accent)}
+.profile{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#242428;border:1px solid #35353b}
+.subtitle{color:#c7c7cd;margin-top:4px;font-size:14px}
+.searchwrap{margin-top:18px;position:relative}
+.searchwrap input{width:100%;border:1px solid #2d2d32;background:#202024;color:#fff;border-radius:16px;padding:15px 46px 15px 16px;font-size:16px;outline:none}
+.searchwrap input:focus{border-color:var(--accent)}
+.searchicon{position:absolute;right:15px;top:50%;transform:translateY(-50%);opacity:.7}
+main{padding:18px}
+.section-title{display:flex;align-items:end;justify-content:space-between;margin:6px 0 12px}
+.section-title h2{font-size:20px;margin:0}
+.section-title span{color:var(--muted);font-size:13px}
+.categories{display:flex;gap:10px;overflow:auto;padding-bottom:4px;scrollbar-width:none}
+.cat{min-width:105px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px;cursor:pointer}
+.cat.active{background:linear-gradient(135deg,#2a201d,#201713);border-color:#6f3a27}
+.cat .e{font-size:24px}.cat b{display:block;margin-top:7px;font-size:14px}.cat small{color:var(--muted)}
+.featured{margin-top:18px;background:linear-gradient(135deg,#3c2117,#1e1c1c);border:1px solid #5a3426;border-radius:22px;padding:18px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
+.featured h3{margin:0 0 6px;font-size:21px}.featured p{margin:0;color:#e4d7d1;font-size:14px;line-height:1.45}.featured .big{font-size:52px}
+.filterbar{display:flex;gap:8px;overflow:auto;margin:18px 0 12px;scrollbar-width:none}
+.filter{border:1px solid var(--line);background:#18181b;color:#fff;border-radius:999px;padding:9px 12px;white-space:nowrap;font-size:13px}
+.filter.active{background:var(--accent);border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;min-width:0;box-shadow:0 10px 28px rgba(0,0,0,.12)}
+.thumb{height:122px;background:linear-gradient(135deg,#2b2b30,#1d1d21);display:grid;place-items:center;font-size:54px;position:relative}
+.badge{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);padding:6px 8px;border-radius:999px;font-size:11px}
+.heart{position:absolute;right:10px;top:10px;width:32px;height:32px;border:0;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:16px}
+.cardbody{padding:12px}
+.card h3{font-size:15px;line-height:1.25;margin:0 0 8px;min-height:38px}
+.meta{display:flex;gap:10px;color:var(--muted);font-size:12px;flex-wrap:wrap}
+.openbtn{width:100%;margin-top:11px;border:0;border-radius:12px;background:#242429;color:#fff;padding:10px;font-weight:700}
+.empty{text-align:center;color:var(--muted);padding:40px 10px}
+.bottom{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(820px,100%);display:grid;grid-template-columns:repeat(4,1fr);background:rgba(20,20,22,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom));z-index:50}
+.navbtn{border:0;background:transparent;color:#9a9aa1;padding:7px 4px;font-size:11px}.navbtn .n{font-size:20px;display:block;margin-bottom:2px}.navbtn.active{color:var(--accent)}
+#detail{display:none}
+.detailtop{padding:16px 18px 8px;display:flex;align-items:center;justify-content:space-between}
+.back,.favbtn{border:0;background:#202024;color:#fff;border-radius:12px;padding:10px 12px}
+.detailhero{margin:0 18px;height:190px;border-radius:24px;background:linear-gradient(135deg,#2a2a30,#18181d);display:grid;place-items:center;font-size:80px;border:1px solid var(--line)}
+.detailcard{margin:14px 18px 0;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:18px}
+.detailcard h1{font-size:24px;line-height:1.15;margin:0 0 10px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.pill{background:#242429;border:1px solid #34343a;border-radius:999px;padding:8px 10px;font-size:12px}
+.nutri{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.nutri div{background:#202024;border-radius:14px;padding:10px;text-align:center}.nutri b{display:block;font-size:15px}.nutri span{font-size:10px;color:var(--muted)}
+.listbox{margin-top:16px}.listbox h3{margin:0 0 10px}.listbox li{margin:9px 0;color:#e3e3e7;line-height:1.45}
+.step{background:#202024;border-radius:14px;padding:12px;margin:10px 0;display:flex;gap:10px}.stepnum{min-width:28px;height:28px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-weight:800}
+@media(max-width:460px){.grid{grid-template-columns:1fr 1fr}.thumb{height:112px}.featured{grid-template-columns:1fr auto}}
+
+.pantryBtn{width:100%;border:0;background:transparent;color:inherit;text-align:left;padding:0;cursor:pointer}
+.overlay{display:none;position:fixed;inset:0;background:#0f0f10;z-index:80;overflow:auto;padding-bottom:30px}
+.overlayHead{position:sticky;top:0;background:rgba(15,15,16,.96);backdrop-filter:blur(12px);padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;z-index:2}
+.overlayHead h2{margin:0;font-size:20px}.overlayBody{padding:18px 18px 120px;max-width:820px;margin:auto}
+.ingrid{display:flex;gap:8px;flex-wrap:wrap}.ing{border:1px solid var(--line);background:#202024;color:#fff;border-radius:999px;padding:10px 12px}.ing.on{background:var(--accent);border-color:var(--accent)}
+.modegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.mode{border:1px solid var(--line);background:#202024;color:#fff;border-radius:14px;padding:10px;font-size:12px}.mode.on{border-color:var(--accent);background:#382117}
+.match{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px;margin:10px 0}.score{color:#ff8a3d;font-weight:900}.missing{color:#ffb59b;font-size:12px;margin-top:7px}
+.shopbtn{border:0;background:#2a2a2f;color:#fff;border-radius:10px;padding:9px 10px;margin-top:9px}
+.shopCount{position:absolute;background:var(--accent);color:#fff;border-radius:99px;font-size:9px;padding:2px 5px;margin-left:-6px}
+.foodpic{height:122px;position:relative;overflow:hidden;background:linear-gradient(135deg,#4b2b1d,#1d1d21)}
+.foodart{position:absolute;inset:0;display:grid;place-items:center;font-size:62px;background:
+radial-gradient(circle at 65% 35%,rgba(255,164,89,.26),transparent 27%),
+radial-gradient(circle at 35% 70%,rgba(255,90,31,.20),transparent 28%),
+linear-gradient(135deg,#2c201b,#19191d)}
+.foodart:after{content:"";position:absolute;width:82px;height:82px;border-radius:50%;border:8px solid rgba(255,255,255,.08);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+@media(max-width:460px){.modegrid{grid-template-columns:1fr}.foodpic{height:112px}}
+
+.v7hero{padding-bottom:14px;background:
+radial-gradient(circle at 86% 0%,rgba(255,90,31,.16),transparent 30%),
+linear-gradient(180deg,#111316,#0f1012)}
+.v7main{padding-top:16px}
+.topcats{display:flex;gap:10px;overflow:auto;margin-top:16px;padding-bottom:2px;scrollbar-width:none}
+.topcat{min-width:76px;border:1px solid #32343a;background:#1a1b1f;color:#fff;border-radius:18px;padding:10px 8px;display:flex;flex-direction:column;gap:6px;align-items:center}
+.topcat span{font-size:24px}.topcat small{font-size:11px;color:#ddd}
+.topcat.active{background:linear-gradient(180deg,#ff6a26,#ff4b16);border-color:#ff6a26}
+.heroBanner{min-height:250px;border-radius:24px;border:1px solid #35373c;overflow:hidden;position:relative;
+display:grid;grid-template-columns:1.25fr .75fr;align-items:center;padding:26px;
+background:
+radial-gradient(circle at 82% 45%,rgba(255,124,56,.35),transparent 24%),
+linear-gradient(135deg,#171a1e,#0d0e10 60%,#28140c)}
+.heroBanner:after{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 72% 55%,rgba(255,255,255,.07),transparent 20%);pointer-events:none}
+.heroText{position:relative;z-index:1}.eyebrow{font-size:11px;letter-spacing:1.3px;color:#ff9a66;font-weight:800}
+.heroText h1{font-size:34px;line-height:1.03;margin:8px 0 10px;max-width:420px}.heroText h1 span{color:#ff5a1f}
+.heroText p{max-width:440px;color:#c5c7cc;line-height:1.45;margin:0 0 18px}
+.heroText button{border:0;background:#ff5a1f;color:#fff;border-radius:999px;padding:13px 18px;font-weight:800}
+.heroFood{font-size:100px;filter:drop-shadow(0 18px 28px rgba(0,0,0,.4));text-align:center;position:relative;z-index:1}
+.featureGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 22px}
+.featureCard{background:#1a1b1f;border:1px solid #35373d;color:#fff;border-radius:18px;padding:14px;text-align:left;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px}
+.featureCard b{display:block;font-size:14px}.featureCard span{display:block;color:#9ea1a8;font-size:11px;margin-top:3px;line-height:1.3}.featureCard strong{font-size:24px;color:#9b9ea5}.featureIcon{font-size:25px}
+.hscroll{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(180px,220px);gap:12px;overflow:auto;padding-bottom:6px;scrollbar-width:none;margin-bottom:22px}
+.miniCard{background:#17191c;border:1px solid #31343a;border-radius:18px;overflow:hidden}
+.miniPic{height:130px;display:grid;place-items:center;font-size:58px;position:relative;background:
+radial-gradient(circle at 70% 40%,rgba(255,133,67,.24),transparent 25%),
+linear-gradient(135deg,#2b1e18,#17181b)}
+.miniPic .time{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.6);padding:5px 7px;border-radius:999px;font-size:10px}
+.miniPic .heart2{position:absolute;right:8px;top:8px;background:rgba(0,0,0,.45);width:30px;height:30px;border-radius:50%;display:grid;place-items:center}
+.miniBody{padding:11px}.miniBody b{display:block;line-height:1.25;font-size:14px;min-height:35px}.miniMeta{color:#a6a9af;font-size:11px;margin-top:7px}
+.miniTags{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}.miniTags span{background:#2a2c31;border-radius:999px;padding:5px 7px;font-size:9px}
+.bottom{grid-template-columns:repeat(4,1fr)}
+@media(max-width:650px){
+ .heroBanner{grid-template-columns:1fr .45fr;padding:20px;min-height:220px}.heroText h1{font-size:29px}.heroFood{font-size:72px}
+ .featureGrid{grid-template-columns:1fr}.featureCard{min-height:74px}
+}
+
+
+.sectionLink{border:0;background:transparent;color:#ff6a26;font-weight:800;padding:4px 0}
+.discoverNotice{display:none;background:linear-gradient(135deg,#442014,#231712);border:1px solid #7b3a22;color:#ffd8c7;border-radius:16px;padding:13px 14px;margin:2px 0 14px;font-size:13px}
+.discoverNotice.show{display:block;animation:popIn .18s ease-out}
+@keyframes popIn{from{transform:translateY(-4px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+.recipeImg{width:100%;height:100%;object-fit:cover;display:block}
+.foodpic,.miniPic{overflow:hidden}
+.detailhero{overflow:hidden}
+.photoShade{position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(transparent,rgba(0,0,0,.45));pointer-events:none}
+
+.dayRow{background:#1a1b1f;border:1px solid #32343a;border-radius:16px;padding:12px;margin:9px 0}
+.dayTop{display:flex;justify-content:space-between;align-items:center}.dayTop b{font-size:15px}
+.planSelect{width:100%;margin-top:9px;background:#23252a;color:#fff;border:1px solid #383b42;border-radius:11px;padding:10px}
+.planRecipe{display:flex;align-items:center;gap:10px;margin-top:10px}.planRecipe img{width:70px;height:48px;object-fit:cover;border-radius:10px}.planRecipe span{font-size:13px}
+</style>
+<meta name="theme-color" content="#f47b20">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./assets/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AirFry">
+<style>
+#pwaTools{position:fixed;right:14px;top:14px;z-index:9999;display:flex;gap:7px}
+.pwaMini{border:0;border-radius:999px;padding:9px 12px;background:#f47b20;color:#fff;font-weight:800;box-shadow:0 3px 12px #0005}
+#updateToast{display:none;position:fixed;left:12px;right:12px;bottom:82px;z-index:10000;background:#202020;color:#fff;padding:13px 14px;border-radius:14px;box-shadow:0 5px 25px #0008}
+#updateToast button{float:right;border:0;border-radius:9px;padding:7px 10px;font-weight:800}
+</style></head>
+<body>
+<div class="app">
+
+<section id="home">
+  <header class="hero v7hero">
+    <div class="brandrow">
+      <div>
+        <div class="logo">👨‍🍳 Air<span>Fry</span></div>
+        <div class="subtitle">EINFACH. SCHNELL. LECKER.</div>
+      </div>
+      <button class="profile" onclick="openOwn()">⚙️</button>
+    </div>
+
+    <div class="searchwrap">
+      <input id="q" placeholder="Rezepte oder Zutaten suchen …">
+      <div class="searchicon">🔎</div>
+    </div>
+
+    <div class="topcats">
+      <button class="topcat active" data-topcat=""><span>▦</span><small>Alle</small></button>
+      <button class="topcat" data-filter2="quick"><span>⏱️</span><small>Schnell</small></button>
+      <button class="topcat" data-filter2="protein"><span>🏋️</span><small>High Protein</small></button>
+      <button class="topcat" data-search="Kartoffeln"><span>🥔</span><small>Kartoffeln</small></button>
+      <button class="topcat" data-search="Gemüse"><span>🥦</span><small>Gemüse</small></button>
+      <button class="topcat" data-cat2="Poulet"><span>🍗</span><small>Poulet</small></button>
+      <button class="topcat" data-cat2="Fleisch"><span>🥩</span><small>Fleisch</small></button>
+      <button class="topcat" data-cat2="Vegetarisch"><span>🌿</span><small>Vegetarisch</small></button>
+    </div>
+  </header>
+
+  <main class="v7main">
+    <section class="heroBanner">
+      <div class="heroText">
+        <div class="eyebrow">500 REZEPTE</div>
+        <h1>Knusprige Ideen für <span>jeden Tag</span></h1>
+        <p>Airfryer-Rezepte, Zutaten-Suche, Favoriten und Kochmodus – alles in einer App.</p>
+        <button onclick="discoverRecipes()">Jetzt entdecken →</button>
+      </div>
+      <div class="heroFood">🥔</div>
+    </section>
+
+    <section class="featureGrid">
+      <button class="featureCard" onclick="openPantry()">
+        <div class="featureIcon">🧺</div><div><b>Was hast du zuhause?</b><span>Rezepte mit deinen Zutaten finden</span></div><strong>›</strong>
+      </button>
+      <button class="featureCard" onclick="openWeek()">
+        <div class="featureIcon">🗓️</div><div><b>Wochenplan</b><span>Einfach planen, besser essen</span></div><strong>›</strong>
+      </button>
+      <button class="featureCard" onclick="openShopping()">
+        <div class="featureIcon">🛒</div><div><b>Einkaufsliste</b><span>Zutaten sammeln und abhaken</span></div><strong>›</strong>
+      </button>
+    </section>
+
+    <div class="section-title" id="popularTitle"><h2>Beliebte Rezepte</h2><button class="sectionLink" onclick="showPopular()">Alle anzeigen ›</button></div>
+    <div id="popularCards" class="hscroll"></div>
+
+    <div class="section-title"><h2>Schnell & einfach</h2><button class="sectionLink" onclick="showQuick()">Alle anzeigen ›</button></div>
+    <div id="quickCards" class="hscroll"></div>
+
+    <div id="discoverNotice" class="discoverNotice">✨ Alle 500 Rezepte bereit – wähle etwas aus oder nutze die Suche.</div>
+    <div class="section-title" id="allRecipesTitle"><h2>Alle Rezepte</h2><span id="resultCount"></span></div>
+    <div id="cards" class="grid"></div>
+  </main>
+</section>
+
+<section id="detail"></section>
+
+
+<section id="pantryOverlay" class="overlay">
+ <div class="overlayHead"><button class="back" onclick="closeOverlay('pantryOverlay')">←</button><h2>Was hast du zuhause?</h2></div>
+ <div class="overlayBody">
+  <p style="color:var(--muted)">Tippe alles an, was du gerade zuhause hast. Du kannst auch eigene Zutaten ergänzen.</p>
+  <div style="display:flex;gap:8px;margin-bottom:12px">
+    <input id="newIngredient" placeholder="Weitere Zutat, z. B. Mozzarella" style="flex:1;background:#202024;color:#fff;border:1px solid var(--line);border-radius:12px;padding:12px">
+    <button class="shopbtn" onclick="addCustomIngredient()">＋ Hinzufügen</button>
+  </div>
+  <div id="ingredientGrid" class="ingrid"></div>
+  <h3>Wie streng soll gesucht werden?</h3>
+  <div class="modegrid">
+   <button class="mode" data-mode="exact">Nur meine Zutaten</button>
+   <button class="mode on" data-mode="two">Max. 2 fehlen</button>
+   <button class="mode" data-mode="ideas">Ideen anzeigen</button>
+  </div>
+  <h3>Vorratskammer</h3>
+  <p style="color:var(--muted);font-size:13px">Diese Basics gelten automatisch als vorhanden.</p>
+  <div id="stapleGrid" class="ingrid"></div>
+  <button id="jumpMatches" class="openbtn" style="position:sticky;bottom:12px;z-index:4;margin:18px 0" onclick="document.querySelector('#matchesTitle').scrollIntoView({behavior:'smooth'})">↓ Vorschläge anzeigen</button>
+  <div id="matchesTitle" class="section-title" style="margin-top:22px"><h2>Passende Rezepte</h2><span id="matchCount"></span></div>
+  <div id="matches" style="min-height:120px"><div class="empty">Vorschläge werden geladen …</div></div>
+ </div>
+</section>
+<section id="weekOverlay" class="overlay">
+<div class="overlayHead"><button class="back" onclick="closeOverlay('weekOverlay')">←</button><h2>Wochenplan</h2></div>
+<div class="overlayBody"><p style="color:var(--muted)">Plane deine Airfryer-Gerichte für die Woche.</p><div id="weekGrid"></div></div>
+</section>
+<section id="ownOverlay" class="overlay">
+<div class="overlayHead"><button class="back" onclick="closeOverlay('ownOverlay')">←</button><h2>Eigene Rezepte</h2></div>
+<div class="overlayBody">
+<input id="ownTitle" placeholder="Rezeptname" style="width:100%;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)">
+<textarea id="ownIngredients" placeholder="Zutaten – eine pro Zeile" style="width:100%;height:120px;margin-top:10px;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)"></textarea>
+<textarea id="ownSteps" placeholder="Zubereitung – ein Schritt pro Zeile" style="width:100%;height:140px;margin-top:10px;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)"></textarea>
+<button class="openbtn" onclick="saveOwn()">Eigenes Rezept speichern</button><div id="ownList"></div>
+</div></section>
+<section id="shoppingOverlay" class="overlay">
+ <div class="overlayHead"><button class="back" onclick="closeOverlay('shoppingOverlay')">←</button><h2>Einkaufsliste</h2></div>
+ <div class="overlayBody"><div id="shoppingList"></div><button class="openbtn" onclick="clearShopping()">Liste leeren</button></div>
+</section>
+<nav class="bottom">
+  <button class="navbtn active" onclick="showHome()"><span class="n">⌂</span>Start</button>
+  <button class="navbtn" onclick="showFavorites()"><span class="n">♡</span>Favoriten</button>
+  <button class="navbtn" onclick="openShopping()"><span class="n">🛒<i id="shopCount" class="shopCount">0</i></span>Einkauf</button>
+  <button class="navbtn" onclick="openOwn()"><span class="n">＋</span>Eigenes</button>
+</nav>
+</div>
+
+<script>
+let data=[],cat="",filter="all";
+const cards=document.querySelector("#cards"), q=document.querySelector("#q"), rc=document.querySelector("#resultCount");
+const favs=new Set(JSON.parse(localStorage.getItem("airfry_favs")||"[]"));
+
+fetch("recipes.json").then(r=>r.json()).then(x=>{
+ data=x;document.querySelector("#countAll").textContent=x.length+" Rezepte";render();
+ const po=document.getElementById("pantryOverlay");
+ if(po && po.style.display==="block") pantryMatches(); renderHomeSections();
+});
+
+function matches(r,s){
+  if(!s) return true;
+  const words=s.toLowerCase().split(/\s+/).filter(Boolean);
+  const hay=[r.title,...r.ingredients,...r.tags,r.category].join(" ").toLowerCase();
+  return words.every(w=>hay.includes(w));
+}
+function filtered(){
+  let arr=data.filter(r=>(!cat||r.category===cat)&&matches(r,q.value.trim()));
+  if(filter==="quick") arr=arr.filter(r=>r.minutes<=20);
+  if(filter==="protein") arr=arr.filter(r=>r.nutrition.protein_g>=30);
+  if(filter==="easy") arr=arr.filter(r=>r.difficulty==="Einfach");
+  return arr;
+}
+function render(){
+  const a=filtered(); rc.textContent=a.length+" Treffer";
+  if(!a.length){cards.innerHTML='<div class="empty">Keine Rezepte gefunden.</div>';return}
+  cards.innerHTML=a.slice(0,80).map(r=>`
+    <article class="card">
+      <div class="foodpic"><img class="recipeImg" src="${r.image}" alt="${r.title}"><div class="photoShade"></div><div class="badge">${r.category}</div>
+      <button class="heart" onclick="toggleFav(event,'${r.id}')">${favs.has(r.id)?"♥":"♡"}</button></div>
+      <div class="cardbody">
+        <h3>${r.title}</h3>
+        <div class="meta"><span>⏱ ${r.minutes} Min.</span><span>🔥 ${r.temperature} °C</span></div>
+        <button class="openbtn" onclick="openRecipe('${r.id}')">Rezept ansehen</button>
+      </div>
+    </article>`).join("");
+}
+q.oninput=render;
+document.querySelectorAll(".cat").forEach(el=>el.onclick=()=>{
+  document.querySelectorAll(".cat").forEach(x=>x.classList.remove("active"));
+  el.classList.add("active");cat=el.dataset.cat;render();
+});
+document.querySelectorAll(".filter").forEach(el=>el.onclick=()=>{
+  document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));
+  el.classList.add("active");filter=el.dataset.filter;render();
+});
+function toggleFav(e,id){e.stopPropagation();favs.has(id)?favs.delete(id):favs.add(id);localStorage.setItem("airfry_favs",JSON.stringify([...favs]));render()}
+function openRecipe(id){
+  const r=data.find(x=>x.id===id), d=document.querySelector("#detail");
+  document.querySelector("#home").style.display="none";d.style.display="block";
+  d.innerHTML=`
+  <div class="detailtop"><button class="back" onclick="goBack()">← Zurück</button><button class="favbtn" onclick="detailFav('${r.id}')">${favs.has(r.id)?"♥ Favorit":"♡ Favorit"}</button></div>
+  <div class="detailhero"><img class="recipeImg" src="${r.image}" alt="${r.title}"></div>
+  <div class="detailcard">
+    <h1>${r.title}</h1>
+    <div class="pills"><span class="pill">⏱ ${r.minutes} Min.</span><span class="pill">🔥 ${r.temperature} °C</span><span class="pill">👥 ${r.portions} Portionen</span><span class="pill">${r.preheat?"Vorheizen":"Kein Vorheizen"}</span></div>
+    <div class="nutri">
+      <div><b>${r.nutrition.kcal}</b><span>kcal</span></div>
+      <div><b>${r.nutrition.protein_g} g</b><span>Eiweiß</span></div>
+      <div><b>${r.nutrition.carbs_g} g</b><span>Carbs</span></div>
+      <div><b>${r.nutrition.fat_g} g</b><span>Fett</span></div>
+    </div><div style="color:var(--muted);font-size:11px;margin-top:6px">Nährwerte sind Richtwerte.</div>
+    <div class="listbox"><h3>Zutaten</h3><div class="pills"><button class="pill" onclick="scalePortions('${r.id}',-1)">−</button><span class="pill" id="portionLabel">${r.portions} Portionen</span><button class="pill" onclick="scalePortions('${r.id}',1)">＋</button></div><ul id="ingredientDetail">${r.ingredients.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+    <button class="openbtn" onclick="startCooking('${r.id}')">▶ Kochmodus starten</button><div class="listbox"><h3>Zubereitung</h3>${r.steps.map((x,i)=>`<div class="step"><div class="stepnum">${i+1}</div><div>${x}</div></div>`).join("")}</div>
+  </div>`;
+  scrollTo(0,0);
+}
+function detailFav(id){favs.has(id)?favs.delete(id):favs.add(id);localStorage.setItem("airfry_favs",JSON.stringify([...favs]));openRecipe(id)}
+function goBack(){document.querySelector("#detail").style.display="none";document.querySelector("#home").style.display="block";render();scrollTo(0,0)}
+
+const pantry=new Set(JSON.parse(localStorage.getItem("airfry_pantry")||"[]"));
+const staples=new Set(JSON.parse(localStorage.getItem("airfry_staples")||'["olivenöl","salz","pfeffer","gewürzmischung"]'));
+let pantryMode="two";
+let shopping=JSON.parse(localStorage.getItem("airfry_shop")||"[]");
+
+let pantryOptions=JSON.parse(localStorage.getItem("airfry_pantry_options")||"null")||["Pouletbrust","Pouletschenkel","Chicken Wings","Rindfleisch","Schweinefilet","Hackfleisch","Halloumi","Tofu","Kichererbsen","Ei","Kartoffeln","Süsskartoffeln","Gemüse","Brokkoli","Peperoni","Zucchini","Mozzarella","Käse","Zwiebel","Knoblauch","Tomaten","Mais","Champignons","Speck","Schinken","Blumenkohl","Karotten"];
+const stapleOptions=["Olivenöl","Salz","Pfeffer","Gewürzmischung"];
+
+function norm(x){return x.toLowerCase()}
+function openPantry(){
+ document.querySelector("#pantryOverlay").style.display="block";
+ document.querySelector(".bottom").style.display="none";
+ document.body.style.overflow="hidden"; drawPantry();
+ if(data.length){ pantryMatches(); }
+ else { document.getElementById("matches").innerHTML='<div class="empty">Rezepte werden noch geladen …</div>'; }
+}
+function closeOverlay(id){document.querySelector("#"+id).style.display="none";document.querySelector(".bottom").style.display="grid";document.body.style.overflow="";render()}
+function drawPantry(){
+ document.getElementById("ingredientGrid").innerHTML=pantryOptions.map(x=>`<button class="ing ${pantry.has(norm(x))?"on":""}" onclick="togglePantry('${x.replaceAll("'","\\'")}')">${x}</button>`).join("");
+ document.getElementById("stapleGrid").innerHTML=stapleOptions.map(x=>`<button class="ing ${staples.has(norm(x))?"on":""}" onclick="toggleStaple('${x}')">${x}</button>`).join("");
+}
+function addCustomIngredient(){
+ const inp=document.querySelector("#newIngredient");
+ const x=(inp.value||"").trim();
+ if(!x)return;
+ if(!pantryOptions.some(v=>norm(v)===norm(x))) pantryOptions.push(x);
+ pantry.add(norm(x));
+ localStorage.setItem("airfry_pantry_options",JSON.stringify(pantryOptions));
+ localStorage.setItem("airfry_pantry",JSON.stringify([...pantry]));
+ inp.value="";drawPantry();pantryMatches();
+}
+function togglePantry(x){let k=norm(x);pantry.has(k)?pantry.delete(k):pantry.add(k);localStorage.setItem("airfry_pantry",JSON.stringify([...pantry]));drawPantry();pantryMatches()}
+function toggleStaple(x){let k=norm(x);staples.has(k)?staples.delete(k):staples.add(k);localStorage.setItem("airfry_staples",JSON.stringify([...staples]));drawPantry();pantryMatches()}
+document.querySelectorAll(".mode").forEach(b=>b.onclick=()=>{document.querySelectorAll(".mode").forEach(x=>x.classList.remove("on"));b.classList.add("on");pantryMode=b.dataset.mode;pantryMatches()});
+
+function recipeNeed(r){
+ let need=[];
+ for(const raw of r.ingredient_keys){
+   const k=norm(raw);
+   const basic=[...staples].some(s=>k.includes(s));
+   const have=[...pantry].some(s=>k.includes(s));
+   if(!basic&&!have) need.push(raw);
+ }
+ return need;
+}
+function pantryMatches(){
+ let scored=data.map(r=>{let miss=recipeNeed(r);let total=Math.max(1,r.ingredient_keys.length);return {r,miss,score:Math.round((total-miss.length)/total*100)}})
+   .filter(x=>pantryMode==="exact"?x.miss.length===0:pantryMode==="two"?x.miss.length<=2:true)
+   .sort((a,b)=>b.score-a.score||a.miss.length-b.miss.length).slice(0,30);
+ const mc=document.getElementById("matchCount");
+ const box=document.getElementById("matches");
+ mc.textContent=scored.length+" Vorschläge";
+ box.innerHTML=scored.length?scored.map(x=>`<div class="match"><div class="score">${x.score}% passend</div><b>${x.r.emoji} ${x.r.title}</b><div class="meta">⏱ ${x.r.minutes} Min. · 🔥 ${x.r.temperature} °C</div>${x.miss.length?`<div class="missing">Fehlt: ${x.miss.join(", ")}</div><button class="shopbtn" onclick='addMissing(${JSON.stringify(x.miss)})'>Fehlendes zur Einkaufsliste</button>`:`<div class="missing">✓ Alles vorhanden</div>`}<button class="openbtn" onclick="closeOverlay('pantryOverlay');openRecipe('${x.r.id}')">Rezept ansehen</button></div>`).join(""):'<div class="empty">Noch keine passende Kombination. Wähle mehr Zutaten oder „Ideen anzeigen“.</div>';
+}
+function addMissing(items){shopping=[...new Set([...shopping,...items])];localStorage.setItem("airfry_shop",JSON.stringify(shopping));updateShopCount()}
+function updateShopCount(){document.querySelector("#shopCount").textContent=shopping.length}
+function openShopping(){document.querySelector("#shoppingOverlay").style.display="block";document.querySelector(".bottom").style.display="none";document.body.style.overflow="hidden";drawShopping()}
+function drawShopping(){document.getElementById("shoppingList").innerHTML=shopping.length?shopping.map((x,i)=>`<div class="match"><label><input type="checkbox" onchange="removeShop(${i})"> ${x}</label></div>`).join(""):'<div class="empty">Deine Einkaufsliste ist leer.</div>';updateShopCount()}
+function removeShop(i){shopping.splice(i,1);localStorage.setItem("airfry_shop",JSON.stringify(shopping));drawShopping()}
+function clearShopping(){shopping=[];localStorage.setItem("airfry_shop","[]");drawShopping()}
+function showFavorites(){cat="";q.value="";let ids=[...favs];let old=data;data=old.filter(r=>ids.includes(r.id));render();data=old;scrollTo(0,0)}
+function showHome(){cat="";q.value="";filter="all";render();scrollTo(0,0)}
+
+let own=JSON.parse(localStorage.getItem("airfry_own")||"[]");
+function openOwn(){document.getElementById("ownOverlay").style.display="block";document.querySelector(".bottom").style.display="none";drawOwn()}
+function saveOwn(){let t=ownTitle.value.trim();if(!t)return;own.push({title:t,ingredients:ownIngredients.value.split("\n").filter(Boolean),steps:ownSteps.value.split("\n").filter(Boolean)});localStorage.setItem("airfry_own",JSON.stringify(own));ownTitle.value=ownIngredients.value=ownSteps.value="";drawOwn()}
+function drawOwn(){ownList.innerHTML=own.length?own.map((r,i)=>`<div class="match"><b>🍽️ ${r.title}</b><div class="meta">${r.ingredients.length} Zutaten · ${r.steps.length} Schritte</div><button class="shopbtn" onclick="deleteOwn(${i})">Löschen</button></div>`).join(""):'<div class="empty">Noch keine eigenen Rezepte.</div>'}
+function deleteOwn(i){own.splice(i,1);localStorage.setItem("airfry_own",JSON.stringify(own));drawOwn()}
+function scalePortions(id,d){let r=data.find(x=>x.id===id);let label=document.getElementById("portionLabel");let cur=parseInt(label.textContent)||r.portions;let next=Math.max(1,cur+d);label.textContent=next+" Portionen";let f=next/r.portions;document.getElementById("ingredientDetail").innerHTML=r.ingredients.map(x=>`<li>${scaleText(x,f)}</li>`).join("")}
+function scaleText(x,f){return x.replace(/^(\d+(?:[.,]\d+)?)/,m=>{let n=parseFloat(m.replace(",","."))*f;return (Math.round(n*10)/10).toString().replace(".",",")})}
+function startCooking(id){let r=data.find(x=>x.id===id);let i=0;function show(){let d=document.getElementById("detail");d.innerHTML=`<div class="detailtop"><button class="back" onclick="openRecipe('${id}')">← Rezept</button><b>Schritt ${i+1} / ${r.steps.length}</b></div><div class="detailhero"><img class="recipeImg" src="${r.image}" alt="${r.title}"></div><div class="detailcard"><h1>${r.title}</h1><div class="step" style="font-size:19px"><div class="stepnum">${i+1}</div><div>${r.steps[i]}</div></div><div class="pills"><span class="pill">🔥 ${r.temperature} °C</span><span class="pill">⏱ ${r.minutes} Min.</span></div>${i<r.steps.length-1?`<button class="openbtn" id="nextCook">Nächster Schritt →</button>`:`<button class="openbtn" onclick="openRecipe('${id}')">✓ Fertig</button>`}</div>`;if(i<r.steps.length-1)document.getElementById("nextCook").onclick=()=>{i++;show()}}show()}
+
+renderHomeSections();
+
+function miniRecipeCard(r){
+  return `<article class="miniCard" onclick="openRecipe('${r.id}')">
+    <div class="miniPic"><img class="recipeImg" src="${r.image}" alt="${r.title}"><div class="photoShade"></div><span class="time">${r.minutes} Min.</span><span class="heart2">${favs.has(r.id)?"♥":"♡"}</span></div>
+    <div class="miniBody"><b>${r.title}</b>
+    <div class="miniMeta">👥 ${r.portions} · 🔥 ${r.temperature} °C · ⏱ ${r.minutes} Min.</div>
+    <div class="miniTags"><span>${r.category}</span><span>${r.difficulty}</span></div></div>
+  </article>`;
+}
+function renderHomeSections(){
+  if(!data.length) return;
+  const popular = [...data].sort((a,b)=>b.nutrition.protein_g-a.nutrition.protein_g).slice(0,8);
+  const quick = data.filter(r=>r.minutes<=20).slice(0,8);
+  const p=document.getElementById("popularCards"), qk=document.getElementById("quickCards");
+  if(p) p.innerHTML=popular.map(miniRecipeCard).join("");
+  if(qk) qk.innerHTML=quick.map(miniRecipeCard).join("");
+}
+document.querySelectorAll(".topcat").forEach(el=>el.onclick=()=>{
+  document.querySelectorAll(".topcat").forEach(x=>x.classList.remove("active"));
+  el.classList.add("active");
+  if(el.dataset.filter2){filter=el.dataset.filter2;cat="";q.value=""}
+  else if(el.dataset.cat2){cat=el.dataset.cat2;filter="all";q.value=""}
+  else if(el.dataset.search){cat="";filter="all";q.value=el.dataset.search}
+  else {cat="";filter="all";q.value=""}
+  render();
+  document.getElementById("popularTitle").scrollIntoView({behavior:"smooth"});
+});
+
+
+function setTopAllActive(){
+  document.querySelectorAll(".topcat").forEach(x=>x.classList.remove("active"));
+  const first=document.querySelector(".topcat");
+  if(first) first.classList.add("active");
+}
+function discoverRecipes(){
+  cat=""; filter="all"; q.value="";
+  setTopAllActive();
+  render();
+  renderHomeSections();
+  const n=document.getElementById("discoverNotice");
+  if(n){
+    n.classList.add("show");
+    clearTimeout(window._discoverTimer);
+    window._discoverTimer=setTimeout(()=>n.classList.remove("show"),4500);
+  }
+  const target=document.getElementById("allRecipesTitle");
+  if(target) target.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function showPopular(){
+  cat=""; filter="protein"; q.value="";
+  document.querySelectorAll(".topcat").forEach(x=>x.classList.remove("active"));
+  render();
+  const n=document.getElementById("discoverNotice");
+  if(n){n.textContent="⭐ Beliebte / proteinreiche Rezepte";n.classList.add("show");}
+  document.getElementById("allRecipesTitle").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function showQuick(){
+  cat=""; filter="quick"; q.value="";
+  document.querySelectorAll(".topcat").forEach(x=>x.classList.remove("active"));
+  const quickTop=[...document.querySelectorAll(".topcat")].find(x=>x.dataset.filter2==="quick");
+  if(quickTop) quickTop.classList.add("active");
+  render();
+  const n=document.getElementById("discoverNotice");
+  if(n){n.textContent="⏱ Rezepte bis 20 Minuten";n.classList.add("show");}
+  document.getElementById("allRecipesTitle").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+
+let weekPlan=JSON.parse(localStorage.getItem("airfry_week")||"{}");
+const weekdays=["Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag"];
+function openWeek(){
+ document.getElementById("weekOverlay").style.display="block";
+ document.querySelector(".bottom").style.display="none";
+ document.body.style.overflow="hidden"; drawWeek();
+}
+function drawWeek(){
+ const box=document.getElementById("weekGrid");
+ const opts=data.slice(0,120).map(r=>`<option value="${r.id}">${r.title}</option>`).join("");
+ box.innerHTML=weekdays.map(d=>{
+   const id=weekPlan[d]||"", r=data.find(x=>x.id===id);
+   return `<div class="dayRow"><div class="dayTop"><b>${d}</b>${id?`<button class="shopbtn" onclick="clearDay('${d}')">Entfernen</button>`:""}</div>
+   <select class="planSelect" onchange="setDay('${d}',this.value)"><option value="">Rezept auswählen …</option>${opts}</select>
+   ${r?`<div class="planRecipe"><img src="${r.image}"><span>${r.title}<br><small>⏱ ${r.minutes} Min. · 🔥 ${r.temperature} °C</small></span></div>`:""}</div>`;
+ }).join("");
+ weekdays.forEach((d,i)=>{let s=box.querySelectorAll("select")[i];if(s&&weekPlan[d])s.value=weekPlan[d]});
+}
+function setDay(day,id){if(id)weekPlan[day]=id;else delete weekPlan[day];localStorage.setItem("airfry_week",JSON.stringify(weekPlan));drawWeek()}
+function clearDay(day){delete weekPlan[day];localStorage.setItem("airfry_week",JSON.stringify(weekPlan));drawWeek()}
+
+updateShopCount();
+
+</script>
+
+<script>
+(function(){
+ const KEYS=['airfry_favorites','airfry_shopping','airfry_pantry','airfry_own_recipes','airfry_weekplan'];
+ function findLocalKey(fragment){return Object.keys(localStorage).find(k=>k.toLowerCase().includes(fragment));}
+ function exportBackup(){
+   const data={app:'AirFry',version:'1.2',created:new Date().toISOString(),localStorage:{}};
+   Object.keys(localStorage).forEach(k=>{ if(k.toLowerCase().includes('air')||KEYS.includes(k)) data.localStorage[k]=localStorage.getItem(k); });
+   const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='AirFry_Backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();
+   setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+ }
+ function importBackup(file){
+   const rd=new FileReader();rd.onload=()=>{
+     try{const d=JSON.parse(rd.result);if(!d.localStorage) throw 0;
+       Object.entries(d.localStorage).forEach(([k,v])=>localStorage.setItem(k,v));
+       alert('Backup wiederhergestellt. AirFry wird neu geladen.');location.reload();
+     }catch(e){alert('Diese Datei ist kein gültiges AirFry-Backup.');}
+   };rd.readAsText(file);
+ }
+ function addTools(){
+   if(document.getElementById('pwaTools')) return;
+   const x=document.createElement('div');x.id='pwaTools';
+   x.innerHTML='<button class="pwaMini" id="backupBtn" title="Backup">💾</button><button class="pwaMini" id="restoreBtn" title="Wiederherstellen">↥</button><input id="restoreFile" type="file" accept="application/json" hidden>';
+   document.body.appendChild(x);
+   document.getElementById('backupBtn').onclick=exportBackup;
+   document.getElementById('restoreBtn').onclick=()=>document.getElementById('restoreFile').click();
+   document.getElementById('restoreFile').onchange=e=>e.target.files[0]&&importBackup(e.target.files[0]);
+ }
+ document.addEventListener('DOMContentLoaded',addTools);
+
+ let deferredPrompt;
+ window.addEventListener('beforeinstallprompt',e=>{
+   e.preventDefault();deferredPrompt=e;
+   const b=document.createElement('button');b.className='pwaMini';b.textContent='📲 App installieren';b.style.cssText='position:fixed;left:14px;top:14px;z-index:9999';
+   b.onclick=async()=>{deferredPrompt.prompt();await deferredPrompt.userChoice;b.remove();deferredPrompt=null;};document.body.appendChild(b);
+ });
+ if('serviceWorker' in navigator){
+   window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').then(reg=>{
+     reg.addEventListener('updatefound',()=>{
+       const nw=reg.installing;nw&&nw.addEventListener('statechange',()=>{
+         if(nw.state==='installed'&&navigator.serviceWorker.controller){
+           let t=document.getElementById('updateToast');if(!t){t=document.createElement('div');t.id='updateToast';t.innerHTML='Neue AirFry-Version verfügbar. <button onclick="location.reload()">Aktualisieren</button>';document.body.appendChild(t);}t.style.display='block';
+         }
+       });
+     });
+   }).catch(console.error));
+ }
+})();
+</script>
+</body></html>
