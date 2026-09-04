@@ -141,7 +141,7 @@ linear-gradient(135deg,#2b1e18,#17181b)}
 
 
 /* v1.4 usability */
-.weekPicker{position:fixed;inset:0;background:#0d0e11;z-index:120;display:none;overflow:auto;padding-bottom:90px}
+.weekPicker{position:fixed!important;inset:0!important;background:#0d0e11!important;z-index:99999!important;display:none;overflow:auto;padding-bottom:90px}
 .weekPickerHead{position:sticky;top:0;background:#111216;border-bottom:1px solid var(--line);padding:12px;z-index:2}
 .weekPickerTop{display:flex;align-items:center;gap:10px}
 .weekPickerSearch{width:100%;margin-top:10px;background:#202024;color:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
@@ -322,7 +322,7 @@ linear-gradient(135deg,#2b1e18,#17181b)}
      </div>
    </div>
    <div class="match">
-     <b>📱 AirFry v1.4.2.2</b>
+     <b>📱 AirFry v1.4.4.2</b>
      <div class="meta" style="margin-top:7px">500 Rezepte · Wochenplan · Einkaufsliste · Kochmodus · eigene Rezepte · Offline-PWA</div>
    </div>
  </div>
@@ -349,6 +349,50 @@ linear-gradient(135deg,#2b1e18,#17181b)}
 
 <script>
 let data=[],cat="",filter="all";
+
+let appHistoryState="home";
+
+function pushAppState(state){
+  history.pushState({airfry:state}, "", location.href);
+  appHistoryState=state;
+}
+function restoreHomeUI(){
+  const detail=document.getElementById("detail");
+  if(detail) detail.style.display="none";
+  document.querySelectorAll(".overlay").forEach(x=>x.style.display="none");
+  const wp=document.getElementById("weekPicker");
+  if(wp) wp.style.display="none";
+  const bottom=document.querySelector(".bottom");
+  if(bottom) bottom.style.display="flex";
+  document.body.style.overflow="";
+}
+window.addEventListener("popstate", function(){
+  const wp=document.getElementById("weekPicker");
+  if(wp && wp.style.display && wp.style.display!=="none"){
+    wp.style.display="none";
+    document.body.style.overflow="hidden";
+    appHistoryState="overlay";
+    return;
+  }
+  const detail=document.getElementById("detail");
+  if(detail && detail.style.display==="block"){
+    detail.style.display="none";
+    document.querySelector(".bottom").style.display="flex";
+    document.body.style.overflow="";
+    appHistoryState="home";
+    return;
+  }
+  const opened=[...document.querySelectorAll(".overlay")].find(x=>x.style.display==="block");
+  if(opened){
+    opened.style.display="none";
+    document.querySelector(".bottom").style.display="flex";
+    document.body.style.overflow="";
+    appHistoryState="home";
+    return;
+  }
+  appHistoryState="home";
+});
+
 const cards=document.querySelector("#cards"), q=document.querySelector("#q"), rc=document.querySelector("#resultCount");
 const favs=new Set(JSON.parse(localStorage.getItem("airfry_favs")||"[]"));
 
@@ -369,6 +413,8 @@ function filtered(){
   if(filter==="quick") arr=arr.filter(r=>r.minutes<=20);
   if(filter==="protein") arr=arr.filter(r=>r.nutrition.protein_g>=30);
   if(filter==="easy") arr=arr.filter(r=>r.difficulty==="Einfach");
+  if(filter==="cooked") arr=arr.filter(r=>cookedInfo(r.id).count>0);
+  if(filter==="uncooked") arr=arr.filter(r=>cookedInfo(r.id).count===0);
   return arr;
 }
 function render(){
@@ -401,8 +447,8 @@ function openRecipe(id){
  let c=cookedInfo(id);
  let d=document.getElementById("detail");
  d.style.display="block";document.querySelector(".bottom").style.display="none";document.body.style.overflow="hidden";
- let fav=favs.includes(id);
- d.innerHTML=`<div class="detailtop"><button class="back" onclick="closeDetail()">←</button><button class="favbig ${fav?'on':''}" onclick="toggleFav('${id}');openRecipe('${id}')">♥</button></div>
+ let fav=favs.has(id);
+ d.innerHTML=`<div class="detailtop"><button class="back" onclick="closeDetail()">←</button><button class="favbig ${fav?'on':''}" onclick="detailFav(\'${id}\')">♥</button></div>
  <div class="detailhero"><img class="recipeImg" src="${r.image}" alt="${r.title}"></div>
  <div class="detailcard">
   <h1>${r.title}</h1>
@@ -418,6 +464,12 @@ function openRecipe(id){
   <button class="openbtn" onclick="startCooking('${id}')">👨‍🍳 Kochmodus starten</button>
  </div>`;
 }
+function closeDetail(){
+ document.getElementById("detail").style.display="none";
+ document.querySelector(".bottom").style.display="flex";
+ document.body.style.overflow="";
+ appHistoryState="home";
+}
 function detailFav(id){favs.has(id)?favs.delete(id):favs.add(id);localStorage.setItem("airfry_favs",JSON.stringify([...favs]));openRecipe(id)}
 function goBack(){document.querySelector("#detail").style.display="none";document.querySelector("#home").style.display="block";render();scrollTo(0,0)}
 
@@ -430,14 +482,19 @@ let pantryOptions=JSON.parse(localStorage.getItem("airfry_pantry_options")||"nul
 const stapleOptions=["Olivenöl","Salz","Pfeffer","Gewürzmischung"];
 
 function norm(x){return x.toLowerCase()}
-function openPantry(){
+function openPantry(){pushAppState("overlay");
  document.querySelector("#pantryOverlay").style.display="block";
  document.querySelector(".bottom").style.display="none";
  document.body.style.overflow="hidden"; drawPantry();
  if(data.length){ pantryMatches(); }
  else { document.getElementById("matches").innerHTML='<div class="empty">Rezepte werden noch geladen …</div>'; }
 }
-function closeOverlay(id){document.getElementById(id).style.display="none";document.querySelector(".bottom").style.display="flex";document.body.style.overflow="";syncOverlayState()}
+function closeOverlay(id){
+ document.getElementById(id).style.display="none";
+ document.querySelector(".bottom").style.display="flex";
+ document.body.style.overflow="";
+ appHistoryState="home";
+}
 function drawPantry(){
  document.getElementById("ingredientGrid").innerHTML=pantryOptions.map(x=>`<button class="ing ${pantry.has(norm(x))?"on":""}" onclick="togglePantry('${x.replaceAll("'","\\'")}')">${x}</button>`).join("");
  document.getElementById("stapleGrid").innerHTML=stapleOptions.map(x=>`<button class="ing ${staples.has(norm(x))?"on":""}" onclick="toggleStaple('${x}')">${x}</button>`).join("");
@@ -500,14 +557,14 @@ function drawWeekPicker(){
    const txt=(r.title+" "+(r.ingredients||[]).join(" ")+" "+(r.category||"")).toLowerCase();
    if(q&&!txt.includes(q))return false;
    const c=cookedInfo(r.id);
-   if(weekFilter==="fav"&&!favs.includes(r.id))return false;
+   if(weekFilter==="fav"&&!favs.has(r.id))return false;
    if(weekFilter==="quick"&&r.minutes>20)return false;
    if(weekFilter==="protein"&&!String(r.tags||"").toLowerCase().includes("protein"))return false;
    if(weekFilter==="cooked"&&!c.count)return false;
    if(weekFilter==="uncooked"&&c.count)return false;
    return true;
  });
- if(weekFilter==="fav") list.sort((a,b)=>favs.includes(b.id)-favs.includes(a.id));
+ if(weekFilter==="fav") list.sort((a,b)=>favs.has(b.id)-favs.has(a.id));
  document.getElementById("weekPickerList").innerHTML=list.slice(0,120).map(r=>{
    const c=cookedInfo(r.id);
    return `<div class="weekRecipeCard" onclick="chooseWeekRecipe('${r.id}')"><img src="${r.image}" alt="${r.title}"><div class="p"><h4>${r.title}</h4><div class="meta">${r.minutes} Min. · ${r.temperature} °C</div>${c.count?`<div class="cookedBadge">✓ ${c.count}× gekocht</div><div class="lastCooked">${c.last}</div>`:""}</div></div>`;
@@ -770,3 +827,41 @@ updateShopCount();
 })();
 </script>
 </body></html>
+<style id="airfry-v143-ui-fix">
+/* Utility controls: keep them tidy and away from each other */
+body > button[title*="Backup"], body > button[aria-label*="Backup"],
+body > button[title*="Import"], body > button[aria-label*="Import"],
+body > button[title*="Einstellung"], body > button[aria-label*="Einstellung"]{
+  right:16px!important;
+}
+.weekPicker{display:flex;flex-direction:column;overflow:auto;}
+.weekPicker.hidden{display:none!important;}
+</style>
+<script>
+/* v1.4.3 robust weekly recipe picker */
+(function(){
+  function showPicker(){
+    const p=document.getElementById('weekPicker');
+    if(!p) return false;
+    p.classList.remove('hidden');
+    p.style.setProperty('display','flex','important');
+    p.style.setProperty('visibility','visible','important');
+    p.style.setProperty('opacity','1','important');
+    p.style.setProperty('z-index','99999','important');
+    document.body.style.overflow='hidden';
+    const q=p.querySelector('input');
+    if(q) setTimeout(()=>q.focus(),80);
+    return true;
+  }
+  document.addEventListener('click',function(e){
+    const el=e.target.closest('select,button,[role="button"],.weekDay,.week-row');
+    if(!el) return;
+    const txt=(el.textContent||'').trim();
+    if(txt.includes('Rezept auswählen')) {
+      e.preventDefault(); e.stopPropagation();
+      showPicker();
+    }
+  },true);
+  window.airfryShowWeekPicker=showPicker;
+})();
+</script>
