@@ -142,6 +142,11 @@ linear-gradient(135deg,#2b1e18,#17181b)}
 
 /* v1.4 usability */
 .weekPicker{position:fixed!important;inset:0!important;background:#0d0e11!important;z-index:99999!important;display:none;overflow:auto;padding-bottom:90px}
+.weekPickerChips .chip{flex:0 0 auto;background:#202126!important;color:#eee!important;border:1px solid #3a3c44!important;border-radius:999px!important;padding:9px 13px!important;min-width:auto!important;height:auto!important;font-size:13px!important}
+.weekPickerChips .chip.active{background:#ff5a1f!important;color:white!important;border-color:#ff5a1f!important}
+.weekRecipeGrid{grid-template-columns:1fr 1fr!important;gap:12px!important}
+.weekRecipeCard{cursor:pointer;box-shadow:0 4px 14px #0005}
+.weekRecipeCard:active{transform:scale(.985)}
 .weekPickerHead{position:sticky;top:0;background:#111216;border-bottom:1px solid var(--line);padding:12px;z-index:2}
 .weekPickerTop{display:flex;align-items:center;gap:10px}
 .weekPickerSearch{width:100%;margin-top:10px;background:#202024;color:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
@@ -165,8 +170,7 @@ linear-gradient(135deg,#2b1e18,#17181b)}
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="AirFry">
 <style>
-#pwaTools{position:fixed;right:14px;top:14px;z-index:9999;display:flex;gap:7px}
-.pwaMini{border:0;border-radius:999px;padding:9px 12px;background:#f47b20;color:#fff;font-weight:800;box-shadow:0 3px 12px #0005}
+#pwaTools{display:none!important}
 #updateToast{display:none;position:fixed;left:12px;right:12px;bottom:82px;z-index:10000;background:#202020;color:#fff;padding:13px 14px;border-radius:14px;box-shadow:0 5px 25px #0008}
 #updateToast button{float:right;border:0;border-radius:9px;padding:7px 10px;font-weight:800}
 </style></head>
@@ -317,12 +321,13 @@ linear-gradient(135deg,#2b1e18,#17181b)}
      <b>💾 Datensicherung</b>
      <div class="meta" style="margin:7px 0 10px">Favoriten, Wochenplan, Einkaufsliste, Vorräte und eigene Rezepte sichern.</div>
      <div style="display:flex;gap:8px;flex-wrap:wrap">
-       <button class="shopbtn" onclick="document.getElementById('backupBtn').click()">Backup erstellen</button>
-       <button class="shopbtn" onclick="document.getElementById('restoreBtn').click()">Backup laden</button>
+       <button class="shopbtn" onclick="exportBackup()">Backup erstellen</button>
+       <button class="shopbtn" onclick="document.getElementById('settingsRestoreFile').click()">Backup laden</button>
+       <input id="settingsRestoreFile" type="file" accept="application/json" hidden onchange="this.files[0]&&importBackup(this.files[0])">
      </div>
    </div>
    <div class="match">
-     <b>📱 AirFry v1.4.4.2</b>
+     <b>📱 AirFry v1.5.2</b>
      <div class="meta" style="margin-top:7px">500 Rezepte · Wochenplan · Einkaufsliste · Kochmodus · eigene Rezepte · Offline-PWA</div>
    </div>
  </div>
@@ -441,9 +446,9 @@ document.querySelectorAll(".filter").forEach(el=>el.onclick=()=>{
   el.classList.add("active");filter=el.dataset.filter;render();
 });
 function toggleFav(e,id){e.stopPropagation();favs.has(id)?favs.delete(id):favs.add(id);localStorage.setItem("airfry_favs",JSON.stringify([...favs]));render()}
-function openRecipe(id){
+function openRecipe(id,push=true){
  let r=data.find(x=>x.id===id); if(!r)return;
- pushAppState("recipe");
+ if(push) pushAppState("recipe");
  let c=cookedInfo(id);
  let d=document.getElementById("detail");
  d.style.display="block";document.querySelector(".bottom").style.display="none";document.body.style.overflow="hidden";
@@ -465,12 +470,13 @@ function openRecipe(id){
  </div>`;
 }
 function closeDetail(){
+ if(history.state && history.state.airfry){history.back();return;}
  document.getElementById("detail").style.display="none";
  document.querySelector(".bottom").style.display="flex";
  document.body.style.overflow="";
  appHistoryState="home";
 }
-function detailFav(id){favs.has(id)?favs.delete(id):favs.add(id);localStorage.setItem("airfry_favs",JSON.stringify([...favs]));openRecipe(id)}
+function detailFav(id){favs.has(id)?favs.delete(id):favs.add(id);localStorage.setItem("airfry_favs",JSON.stringify([...favs]));openRecipe(id,false)}
 function goBack(){document.querySelector("#detail").style.display="none";document.querySelector("#home").style.display="block";render();scrollTo(0,0)}
 
 const pantry=new Set(JSON.parse(localStorage.getItem("airfry_pantry")||"[]"));
@@ -490,6 +496,7 @@ function openPantry(){pushAppState("overlay");
  else { document.getElementById("matches").innerHTML='<div class="empty">Rezepte werden noch geladen …</div>'; }
 }
 function closeOverlay(id){
+ if(history.state && history.state.airfry){history.back();return;}
  document.getElementById(id).style.display="none";
  document.querySelector(".bottom").style.display="flex";
  document.body.style.overflow="";
@@ -548,9 +555,16 @@ function openWeekPicker(day){
  document.getElementById("weekPicker").style.display="block";
  document.body.style.overflow="hidden";pushAppState("weekPicker");drawWeekPicker();
 }
-function closeWeekPicker(){document.getElementById("weekPicker").style.display="none";document.body.style.overflow="hidden";syncOverlayState()}
+function closeWeekPicker(){
+ if(history.state && history.state.airfry==="weekPicker"){history.back();return;}
+ document.getElementById("weekPicker").style.display="none";document.body.style.overflow="hidden";appHistoryState="overlay";
+}
 function setWeekFilter(f,btn){weekFilter=f;document.querySelectorAll("[data-wfilter]").forEach(x=>x.classList.remove("active"));btn.classList.add("active");drawWeekPicker()}
-function chooseWeekRecipe(id){weekPlan[weekPickerDay]=id;localStorage.setItem("airfry_week",JSON.stringify(weekPlan));closeWeekPicker();drawWeek()}
+function chooseWeekRecipe(id){
+ weekPlan[weekPickerDay]=id;localStorage.setItem("airfry_week",JSON.stringify(weekPlan));
+ document.getElementById("weekPicker").style.display="none";document.body.style.overflow="hidden";appHistoryState="overlay";drawWeek();
+ if(history.state && history.state.airfry==="weekPicker") history.back();
+}
 function drawWeekPicker(){
  const q=(document.getElementById("weekPickerSearch").value||"").toLowerCase().trim();
  let list=data.filter(r=>{
@@ -559,7 +573,7 @@ function drawWeekPicker(){
    const c=cookedInfo(r.id);
    if(weekFilter==="fav"&&!favs.has(r.id))return false;
    if(weekFilter==="quick"&&r.minutes>20)return false;
-   if(weekFilter==="protein"&&!String(r.tags||"").toLowerCase().includes("protein"))return false;
+   if(weekFilter==="protein"&&(!r.nutrition||r.nutrition.protein_g<30))return false;
    if(weekFilter==="cooked"&&!c.count)return false;
    if(weekFilter==="uncooked"&&c.count)return false;
    return true;
@@ -595,7 +609,7 @@ function markCooked(id){
   cooked[key].dates.unshift(now.toISOString());
   cooked[key].dates=cooked[key].dates.slice(0,20);
   saveCooked();
-  openRecipe(id);
+  openRecipe(id,false);
 }
 function unmarkCooked(id){
   const key=String(id);
@@ -605,7 +619,7 @@ function unmarkCooked(id){
   cooked[key].last=(cooked[key].dates&&cooked[key].dates[0])||null;
   if(cooked[key].count<=0) delete cooked[key];
   saveCooked();
-  openRecipe(id);
+  openRecipe(id,false);
 }
 function cookedInfo(id){
   const c=cooked[String(id)];
@@ -778,90 +792,23 @@ updateShopCount();
 </script>
 
 <script>
-(function(){
- const KEYS=['airfry_favorites','airfry_shopping','airfry_pantry','airfry_own_recipes','airfry_weekplan'];
- function findLocalKey(fragment){return Object.keys(localStorage).find(k=>k.toLowerCase().includes(fragment));}
- function exportBackup(){
-   const data={app:'AirFry',version:'1.4.2',created:new Date().toISOString(),localStorage:{}};
-   Object.keys(localStorage).forEach(k=>{ if(k.toLowerCase().includes('air')||KEYS.includes(k)) data.localStorage[k]=localStorage.getItem(k); });
-   const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
-   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='AirFry_Backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();
-   setTimeout(()=>URL.revokeObjectURL(a.href),1000);
- }
- function importBackup(file){
-   const rd=new FileReader();rd.onload=()=>{
-     try{const d=JSON.parse(rd.result);if(!d.localStorage) throw 0;
-       Object.entries(d.localStorage).forEach(([k,v])=>localStorage.setItem(k,v));
-       alert('Backup wiederhergestellt. AirFry wird neu geladen.');location.reload();
-     }catch(e){alert('Diese Datei ist kein gültiges AirFry-Backup.');}
-   };rd.readAsText(file);
- }
- function addTools(){
-   if(document.getElementById('pwaTools')) return;
-   const x=document.createElement('div');x.id='pwaTools';
-   x.innerHTML='<button class="pwaMini" id="backupBtn" title="Backup">💾</button><button class="pwaMini" id="restoreBtn" title="Wiederherstellen">↥</button><input id="restoreFile" type="file" accept="application/json" hidden>';
-   document.body.appendChild(x);
-   document.getElementById('backupBtn').onclick=exportBackup;
-   document.getElementById('restoreBtn').onclick=()=>document.getElementById('restoreFile').click();
-   document.getElementById('restoreFile').onchange=e=>e.target.files[0]&&importBackup(e.target.files[0]);
- }
- document.addEventListener('DOMContentLoaded',addTools);
-
- let deferredPrompt;
- window.addEventListener('beforeinstallprompt',e=>{
-   e.preventDefault();deferredPrompt=e;
-   const b=document.createElement('button');b.className='pwaMini';b.textContent='📲 App installieren';b.style.cssText='position:fixed;left:14px;top:14px;z-index:9999';
-   b.onclick=async()=>{deferredPrompt.prompt();await deferredPrompt.userChoice;b.remove();deferredPrompt=null;};document.body.appendChild(b);
- });
- if('serviceWorker' in navigator){
-   window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').then(reg=>{
-     reg.addEventListener('updatefound',()=>{
-       const nw=reg.installing;nw&&nw.addEventListener('statechange',()=>{
-         if(nw.state==='installed'&&navigator.serviceWorker.controller){
-           let t=document.getElementById('updateToast');if(!t){t=document.createElement('div');t.id='updateToast';t.innerHTML='Neue AirFry-Version verfügbar. <button onclick="location.reload()">Aktualisieren</button>';document.body.appendChild(t);}t.style.display='block';
-         }
-       });
-     });
-   }).catch(console.error));
- }
-})();
+const BACKUP_KEYS=['airfry_favs','airfry_shop','airfry_pantry','airfry_staples','airfry_pantry_options','airfry_own','airfry_week','airfry_cooked'];
+function exportBackup(){
+ const payload={app:'AirFry',version:'1.5',created:new Date().toISOString(),localStorage:{}};
+ BACKUP_KEYS.forEach(k=>{const v=localStorage.getItem(k);if(v!==null)payload.localStorage[k]=v;});
+ const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='AirFry_Backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+function importBackup(file){
+ const rd=new FileReader();rd.onload=()=>{try{const d=JSON.parse(rd.result);if(!d.localStorage)throw 0;Object.entries(d.localStorage).forEach(([k,v])=>localStorage.setItem(k,v));alert('Backup wiederhergestellt. AirFry wird neu geladen.');location.reload();}catch(e){alert('Diese Datei ist kein gültiges AirFry-Backup.');}};rd.readAsText(file);
+}
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;});
+if('serviceWorker' in navigator){
+ window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').then(reg=>{
+   reg.update();
+   reg.addEventListener('updatefound',()=>{const nw=reg.installing;nw&&nw.addEventListener('statechange',()=>{if(nw.state==='installed'&&navigator.serviceWorker.controller){let t=document.getElementById('updateToast');if(!t){t=document.createElement('div');t.id='updateToast';t.innerHTML='Neue AirFry-Version verfügbar. <button onclick="location.reload()">Aktualisieren</button>';document.body.appendChild(t);}t.style.display='block';}});});
+ }).catch(console.error));
+}
 </script>
 </body></html>
-<style id="airfry-v143-ui-fix">
-/* Utility controls: keep them tidy and away from each other */
-body > button[title*="Backup"], body > button[aria-label*="Backup"],
-body > button[title*="Import"], body > button[aria-label*="Import"],
-body > button[title*="Einstellung"], body > button[aria-label*="Einstellung"]{
-  right:16px!important;
-}
-.weekPicker{display:flex;flex-direction:column;overflow:auto;}
-.weekPicker.hidden{display:none!important;}
-</style>
-<script>
-/* v1.4.3 robust weekly recipe picker */
-(function(){
-  function showPicker(){
-    const p=document.getElementById('weekPicker');
-    if(!p) return false;
-    p.classList.remove('hidden');
-    p.style.setProperty('display','flex','important');
-    p.style.setProperty('visibility','visible','important');
-    p.style.setProperty('opacity','1','important');
-    p.style.setProperty('z-index','99999','important');
-    document.body.style.overflow='hidden';
-    const q=p.querySelector('input');
-    if(q) setTimeout(()=>q.focus(),80);
-    return true;
-  }
-  document.addEventListener('click',function(e){
-    const el=e.target.closest('select,button,[role="button"],.weekDay,.week-row');
-    if(!el) return;
-    const txt=(el.textContent||'').trim();
-    if(txt.includes('Rezept auswählen')) {
-      e.preventDefault(); e.stopPropagation();
-      showPicker();
-    }
-  },true);
-  window.airfryShowWeekPicker=showPicker;
-})();
-</script>
