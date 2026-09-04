@@ -131,6 +131,7 @@ linear-gradient(135deg,#2b1e18,#17181b)}
 .dayTop{display:flex;justify-content:space-between;align-items:center}.dayTop b{font-size:15px}
 .planSelect{width:100%;margin-top:9px;background:#23252a;color:#fff;border:1px solid #383b42;border-radius:11px;padding:10px}
 .planRecipe{display:flex;align-items:center;gap:10px;margin-top:10px}.planRecipe img{width:70px;height:48px;object-fit:cover;border-radius:10px}.planRecipe span{font-size:13px}
+.timerBox{margin:14px 0;padding:14px;border:1px solid #383b42;border-radius:16px;background:#17181c;text-align:center}.timerClock{font-size:34px;font-weight:900;letter-spacing:1px;margin:6px 0 10px}.timerBtns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}.timerBtns button{border:0;border-radius:12px;padding:10px 14px;font-weight:800}.ownActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 </style>
 <meta name="theme-color" content="#f47b20">
 <link rel="manifest" href="./manifest.json">
@@ -154,7 +155,7 @@ linear-gradient(135deg,#2b1e18,#17181b)}
         <div class="logo">👨‍🍳 Air<span>Fry</span></div>
         <div class="subtitle">EINFACH. SCHNELL. LECKER.</div>
       </div>
-      <button class="profile" onclick="openOwn()">⚙️</button>
+      <button class="profile" onclick="openSettings()">⚙️</button>
     </div>
 
     <div class="searchwrap">
@@ -237,19 +238,17 @@ linear-gradient(135deg,#2b1e18,#17181b)}
 </section>
 <section id="weekOverlay" class="overlay">
 <div class="overlayHead"><button class="back" onclick="closeOverlay('weekOverlay')">←</button><h2>Wochenplan</h2></div>
-<div class="overlayBody"><p style="color:var(--muted)">Plane deine Airfryer-Gerichte für die Woche.</p><div id="weekGrid"></div></div>
+<div class="overlayBody"><p style="color:var(--muted)">Plane deine Airfryer-Gerichte für die Woche.</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><button class="openbtn" style="flex:1" onclick="addWeekToShopping()">🛒 Woche zur Einkaufsliste</button><button class="shopbtn" onclick="clearWeek()">Woche leeren</button></div><div id="weekGrid"></div></div>
 </section>
 <section id="ownOverlay" class="overlay">
 <div class="overlayHead"><button class="back" onclick="closeOverlay('ownOverlay')">←</button><h2>Eigene Rezepte</h2></div>
 <div class="overlayBody">
-<input id="ownTitle" placeholder="Rezeptname" style="width:100%;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)">
-<textarea id="ownIngredients" placeholder="Zutaten – eine pro Zeile" style="width:100%;height:120px;margin-top:10px;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)"></textarea>
-<textarea id="ownSteps" placeholder="Zubereitung – ein Schritt pro Zeile" style="width:100%;height:140px;margin-top:10px;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)"></textarea>
-<button class="openbtn" onclick="saveOwn()">Eigenes Rezept speichern</button><div id="ownList"></div>
+<input id="ownEditIndex" type="hidden" value=""><input id="ownTitle" placeholder="Rezeptname" style="width:100%;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><input id="ownMinutes" type="number" min="1" placeholder="Minuten" style="width:100%;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)"><input id="ownTemp" type="number" min="50" max="240" placeholder="°C" style="width:100%;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)"></div><textarea id="ownIngredients" placeholder="Zutaten – eine pro Zeile" style="width:100%;height:120px;margin-top:10px;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)"></textarea><textarea id="ownSteps" placeholder="Zubereitung – ein Schritt pro Zeile" style="width:100%;height:140px;margin-top:10px;padding:12px;border-radius:12px;background:#202024;color:#fff;border:1px solid var(--line)"></textarea><div style="display:flex;gap:8px"><button id="ownSaveBtn" class="openbtn" style="flex:1" onclick="saveOwn()">Eigenes Rezept speichern</button><button id="ownCancelBtn" class="shopbtn" style="display:none" onclick="cancelOwnEdit()">Abbrechen</button></div><div id="ownList"></div>
 </div></section>
+<section id="settingsOverlay" class="overlay"><div class="overlayHead"><button class="back" onclick="closeOverlay('settingsOverlay')">←</button><h2>Einstellungen</h2></div><div class="overlayBody"><div class="match"><b>💾 Datensicherung</b><div class="meta" style="margin:7px 0 10px">Favoriten, Wochenplan, Einkaufsliste, Vorräte und eigene Rezepte sichern.</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="shopbtn" onclick="document.getElementById('backupBtn').click()">Backup erstellen</button><button class="shopbtn" onclick="document.getElementById('restoreBtn').click()">Backup laden</button></div></div><div class="match"><b>📱 AirFry v1.3</b><div class="meta" style="margin-top:7px">500 Rezepte · Wochenplan · Einkaufsliste · Kochmodus · eigene Rezepte · Offline-PWA</div></div></div></section>
 <section id="shoppingOverlay" class="overlay">
  <div class="overlayHead"><button class="back" onclick="closeOverlay('shoppingOverlay')">←</button><h2>Einkaufsliste</h2></div>
- <div class="overlayBody"><div id="shoppingList"></div><button class="openbtn" onclick="clearShopping()">Liste leeren</button></div>
+ <div class="overlayBody"><div style="display:flex;gap:8px;margin-bottom:12px"><input id="shopManual" placeholder="Artikel hinzufügen …" style="flex:1;background:#202024;color:#fff;border:1px solid var(--line);border-radius:12px;padding:12px"><button class="shopbtn" onclick="addManualShop()">＋</button></div><div id="shoppingList"></div><button class="openbtn" onclick="clearShopping()">Liste leeren</button></div>
 </section>
 <nav class="bottom">
   <button class="navbtn active" onclick="showHome()"><span class="n">⌂</span>Start</button>
@@ -384,23 +383,36 @@ function pantryMatches(){
  mc.textContent=scored.length+" Vorschläge";
  box.innerHTML=scored.length?scored.map(x=>`<div class="match"><div class="score">${x.score}% passend</div><b>${x.r.emoji} ${x.r.title}</b><div class="meta">⏱ ${x.r.minutes} Min. · 🔥 ${x.r.temperature} °C</div>${x.miss.length?`<div class="missing">Fehlt: ${x.miss.join(", ")}</div><button class="shopbtn" onclick='addMissing(${JSON.stringify(x.miss)})'>Fehlendes zur Einkaufsliste</button>`:`<div class="missing">✓ Alles vorhanden</div>`}<button class="openbtn" onclick="closeOverlay('pantryOverlay');openRecipe('${x.r.id}')">Rezept ansehen</button></div>`).join(""):'<div class="empty">Noch keine passende Kombination. Wähle mehr Zutaten oder „Ideen anzeigen“.</div>';
 }
-function addMissing(items){shopping=[...new Set([...shopping,...items])];localStorage.setItem("airfry_shop",JSON.stringify(shopping));updateShopCount()}
+function normalizeShopText(x){return String(x).trim().replace(/\s+/g," ")}
+function addShoppingItems(items){const seen=new Set(shopping.map(x=>normalizeShopText(x).toLowerCase()));items.forEach(x=>{x=normalizeShopText(x);if(x&&!seen.has(x.toLowerCase())){shopping.push(x);seen.add(x.toLowerCase())}});localStorage.setItem("airfry_shop",JSON.stringify(shopping));updateShopCount()}
+function addMissing(items){addShoppingItems(items)}
+function addManualShop(){let x=shopManual.value.trim();if(!x)return;addShoppingItems([x]);shopManual.value="";drawShopping()}
 function updateShopCount(){document.querySelector("#shopCount").textContent=shopping.length}
 function openShopping(){document.querySelector("#shoppingOverlay").style.display="block";document.querySelector(".bottom").style.display="none";document.body.style.overflow="hidden";drawShopping()}
 function drawShopping(){document.getElementById("shoppingList").innerHTML=shopping.length?shopping.map((x,i)=>`<div class="match"><label><input type="checkbox" onchange="removeShop(${i})"> ${x}</label></div>`).join(""):'<div class="empty">Deine Einkaufsliste ist leer.</div>';updateShopCount()}
 function removeShop(i){shopping.splice(i,1);localStorage.setItem("airfry_shop",JSON.stringify(shopping));drawShopping()}
-function clearShopping(){shopping=[];localStorage.setItem("airfry_shop","[]");drawShopping()}
+function clearShopping(){if(shopping.length&&!confirm("Einkaufsliste wirklich leeren?"))return;shopping=[];localStorage.setItem("airfry_shop","[]");drawShopping()}
 function showFavorites(){cat="";q.value="";let ids=[...favs];let old=data;data=old.filter(r=>ids.includes(r.id));render();data=old;scrollTo(0,0)}
 function showHome(){cat="";q.value="";filter="all";render();scrollTo(0,0)}
+function openSettings(){document.getElementById("settingsOverlay").style.display="block";document.querySelector(".bottom").style.display="none";document.body.style.overflow="hidden"}
 
 let own=JSON.parse(localStorage.getItem("airfry_own")||"[]");
 function openOwn(){document.getElementById("ownOverlay").style.display="block";document.querySelector(".bottom").style.display="none";drawOwn()}
-function saveOwn(){let t=ownTitle.value.trim();if(!t)return;own.push({title:t,ingredients:ownIngredients.value.split("\n").filter(Boolean),steps:ownSteps.value.split("\n").filter(Boolean)});localStorage.setItem("airfry_own",JSON.stringify(own));ownTitle.value=ownIngredients.value=ownSteps.value="";drawOwn()}
-function drawOwn(){ownList.innerHTML=own.length?own.map((r,i)=>`<div class="match"><b>🍽️ ${r.title}</b><div class="meta">${r.ingredients.length} Zutaten · ${r.steps.length} Schritte</div><button class="shopbtn" onclick="deleteOwn(${i})">Löschen</button></div>`).join(""):'<div class="empty">Noch keine eigenen Rezepte.</div>'}
-function deleteOwn(i){own.splice(i,1);localStorage.setItem("airfry_own",JSON.stringify(own));drawOwn()}
+function resetOwnForm(){ownEditIndex.value="";ownTitle.value="";ownMinutes.value="";ownTemp.value="";ownIngredients.value="";ownSteps.value="";ownSaveBtn.textContent="Eigenes Rezept speichern";ownCancelBtn.style.display="none"}
+function saveOwn(){let t=ownTitle.value.trim();if(!t){alert("Bitte einen Rezeptnamen eingeben.");return}let item={title:t,minutes:parseInt(ownMinutes.value)||null,temperature:parseInt(ownTemp.value)||null,ingredients:ownIngredients.value.split("\n").map(x=>x.trim()).filter(Boolean),steps:ownSteps.value.split("\n").map(x=>x.trim()).filter(Boolean)};let idx=ownEditIndex.value;if(idx==="")own.push(item);else own[parseInt(idx)]=item;localStorage.setItem("airfry_own",JSON.stringify(own));resetOwnForm();drawOwn()}
+function editOwn(i){let r=own[i];ownEditIndex.value=i;ownTitle.value=r.title||"";ownMinutes.value=r.minutes||"";ownTemp.value=r.temperature||"";ownIngredients.value=(r.ingredients||[]).join("\n");ownSteps.value=(r.steps||[]).join("\n");ownSaveBtn.textContent="Änderungen speichern";ownCancelBtn.style.display="inline-block";document.getElementById("ownOverlay").scrollTo({top:0,behavior:"smooth"})}
+function cancelOwnEdit(){resetOwnForm()}
+function drawOwn(){ownList.innerHTML=own.length?own.map((r,i)=>`<div class="match"><b>🍽️ ${r.title}</b><div class="meta">${r.ingredients.length} Zutaten · ${r.steps.length} Schritte${r.minutes?` · ⏱ ${r.minutes} Min.`:""}${r.temperature?` · 🔥 ${r.temperature} °C`:""}</div><div class="ownActions"><button class="shopbtn" onclick="editOwn(${i})">✏️ Bearbeiten</button><button class="shopbtn" onclick="deleteOwn(${i})">🗑️ Löschen</button></div></div>`).join(""):'<div class="empty">Noch keine eigenen Rezepte.</div>'}
+function deleteOwn(i){if(!confirm("Dieses eigene Rezept wirklich löschen?"))return;own.splice(i,1);localStorage.setItem("airfry_own",JSON.stringify(own));if(String(i)===ownEditIndex.value)resetOwnForm();drawOwn()}
 function scalePortions(id,d){let r=data.find(x=>x.id===id);let label=document.getElementById("portionLabel");let cur=parseInt(label.textContent)||r.portions;let next=Math.max(1,cur+d);label.textContent=next+" Portionen";let f=next/r.portions;document.getElementById("ingredientDetail").innerHTML=r.ingredients.map(x=>`<li>${scaleText(x,f)}</li>`).join("")}
 function scaleText(x,f){return x.replace(/^(\d+(?:[.,]\d+)?)/,m=>{let n=parseFloat(m.replace(",","."))*f;return (Math.round(n*10)/10).toString().replace(".",",")})}
-function startCooking(id){let r=data.find(x=>x.id===id);let i=0;function show(){let d=document.getElementById("detail");d.innerHTML=`<div class="detailtop"><button class="back" onclick="openRecipe('${id}')">← Rezept</button><b>Schritt ${i+1} / ${r.steps.length}</b></div><div class="detailhero"><img class="recipeImg" src="${r.image}" alt="${r.title}"></div><div class="detailcard"><h1>${r.title}</h1><div class="step" style="font-size:19px"><div class="stepnum">${i+1}</div><div>${r.steps[i]}</div></div><div class="pills"><span class="pill">🔥 ${r.temperature} °C</span><span class="pill">⏱ ${r.minutes} Min.</span></div>${i<r.steps.length-1?`<button class="openbtn" id="nextCook">Nächster Schritt →</button>`:`<button class="openbtn" onclick="openRecipe('${id}')">✓ Fertig</button>`}</div>`;if(i<r.steps.length-1)document.getElementById("nextCook").onclick=()=>{i++;show()}}show()}
+let cookTimerSeconds=0,cookTimerInitial=0,cookTimerInterval=null;
+function fmtTimer(s){let m=Math.floor(s/60),ss=s%60;return String(m).padStart(2,"0")+":"+String(ss).padStart(2,"0")}
+function paintTimer(){let el=document.getElementById("cookTimerClock");if(el)el.textContent=fmtTimer(cookTimerSeconds)}
+function startPauseTimer(){const b=document.getElementById("cookTimerStart");if(cookTimerInterval){clearInterval(cookTimerInterval);cookTimerInterval=null;if(b)b.textContent="▶ Start";return}if(cookTimerSeconds<=0)cookTimerSeconds=cookTimerInitial;if(b)b.textContent="⏸ Pause";cookTimerInterval=setInterval(()=>{cookTimerSeconds--;paintTimer();if(cookTimerSeconds<=0){clearInterval(cookTimerInterval);cookTimerInterval=null;paintTimer();if(navigator.vibrate)navigator.vibrate([250,150,250]);alert("⏱ AirFry-Timer ist fertig!");if(b)b.textContent="▶ Start"}},1000)}
+function resetCookTimer(){if(cookTimerInterval){clearInterval(cookTimerInterval);cookTimerInterval=null}cookTimerSeconds=cookTimerInitial;paintTimer();let b=document.getElementById("cookTimerStart");if(b)b.textContent="▶ Start"}
+function adjustCookTimer(mins){cookTimerSeconds=Math.max(0,cookTimerSeconds+mins*60);paintTimer()}
+function startCooking(id){let r=data.find(x=>x.id===id),i=0;if(cookTimerInterval){clearInterval(cookTimerInterval);cookTimerInterval=null}cookTimerInitial=r.minutes*60;cookTimerSeconds=cookTimerInitial;function show(){let d=document.getElementById("detail");d.innerHTML=`<div class="detailtop"><button class="back" onclick="openRecipe('${id}')">← Rezept</button><b>Schritt ${i+1} / ${r.steps.length}</b></div><div class="detailhero"><img class="recipeImg" src="${r.image}" alt="${r.title}"></div><div class="detailcard"><h1>${r.title}</h1><div class="step" style="font-size:19px"><div class="stepnum">${i+1}</div><div>${r.steps[i]}</div></div><div class="pills"><span class="pill">🔥 ${r.temperature} °C</span><span class="pill">⏱ ${r.minutes} Min.</span></div><div class="timerBox"><div style="font-weight:800">Koch-Timer</div><div id="cookTimerClock" class="timerClock">${fmtTimer(cookTimerSeconds)}</div><div class="timerBtns"><button onclick="adjustCookTimer(-1)">−1 Min.</button><button id="cookTimerStart" onclick="startPauseTimer()">▶ Start</button><button onclick="adjustCookTimer(1)">+1 Min.</button><button onclick="resetCookTimer()">↺ Reset</button></div></div>${i<r.steps.length-1?`<button class="openbtn" id="nextCook">Nächster Schritt →</button>`:`<button class="openbtn" onclick="openRecipe('${id}')">✓ Fertig</button>`}</div>`;if(cookTimerInterval){let b=document.getElementById("cookTimerStart");if(b)b.textContent="⏸ Pause"}if(i<r.steps.length-1)document.getElementById("nextCook").onclick=()=>{i++;show()}}show()}
 
 renderHomeSections();
 
@@ -491,6 +503,8 @@ function drawWeek(){
 }
 function setDay(day,id){if(id)weekPlan[day]=id;else delete weekPlan[day];localStorage.setItem("airfry_week",JSON.stringify(weekPlan));drawWeek()}
 function clearDay(day){delete weekPlan[day];localStorage.setItem("airfry_week",JSON.stringify(weekPlan));drawWeek()}
+function clearWeek(){if(Object.keys(weekPlan).length&&!confirm("Wochenplan wirklich leeren?"))return;weekPlan={};localStorage.setItem("airfry_week","{}");drawWeek()}
+function addWeekToShopping(){const chosen=weekdays.map(d=>data.find(r=>r.id===weekPlan[d])).filter(Boolean);if(!chosen.length){alert("Im Wochenplan ist noch kein Rezept eingetragen.");return}const items=[];chosen.forEach(r=>(r.ingredients||[]).forEach(x=>items.push(x)));addShoppingItems(items);alert("🛒 Zutaten aus "+chosen.length+" geplanten Rezept(en) wurden zur Einkaufsliste hinzugefügt.")}
 
 updateShopCount();
 
@@ -501,7 +515,7 @@ updateShopCount();
  const KEYS=['airfry_favorites','airfry_shopping','airfry_pantry','airfry_own_recipes','airfry_weekplan'];
  function findLocalKey(fragment){return Object.keys(localStorage).find(k=>k.toLowerCase().includes(fragment));}
  function exportBackup(){
-   const data={app:'AirFry',version:'1.2',created:new Date().toISOString(),localStorage:{}};
+   const data={app:'AirFry',version:'1.3',created:new Date().toISOString(),localStorage:{}};
    Object.keys(localStorage).forEach(k=>{ if(k.toLowerCase().includes('air')||KEYS.includes(k)) data.localStorage[k]=localStorage.getItem(k); });
    const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='AirFry_Backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();
