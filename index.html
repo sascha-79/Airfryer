@@ -322,7 +322,7 @@ linear-gradient(135deg,#2b1e18,#17181b)}
      </div>
    </div>
    <div class="match">
-     <b>📱 AirFry v1.4</b>
+     <b>📱 AirFry v1.4.1</b>
      <div class="meta" style="margin-top:7px">500 Rezepte · Wochenplan · Einkaufsliste · Kochmodus · eigene Rezepte · Offline-PWA</div>
    </div>
  </div>
@@ -480,6 +480,8 @@ function addShoppingItems(items){
  const seen=new Set(shopping.map(x=>normalizeShopText(x).toLowerCase()));
  items.forEach(x=>{x=normalizeShopText(x);if(x&&!seen.has(x.toLowerCase())){shopping.push(x);seen.add(x.toLowerCase())}});
  localStorage.setItem("airfry_shop",JSON.stringify(shopping));
+ updateShopCount();
+}
 let weekPickerDay=null,weekFilter="all";
 function openWeekPicker(day){
  weekPickerDay=day;weekFilter="all";
@@ -513,7 +515,6 @@ function drawWeekPicker(){
 }
 
 updateShopCount();
-}
 function addMissing(items){addShoppingItems(items)}
 function addManualShop(){let x=shopManual.value.trim();if(!x)return;addShoppingItems([x]);shopManual.value="";drawShopping()}
 function updateShopCount(){document.querySelector("#shopCount").textContent=shopping.length}
